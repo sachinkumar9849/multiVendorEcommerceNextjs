@@ -22,3 +22,23 @@ body {
     height: 10px;
     background: #ffffff82;
 }
+.headerCategories::after {
+    background-image: url(https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/catalog/view/theme/so-emarket/images/icon/icon-tit.png);
+    bottom: -24px;
+    content: "";
+    height: 32px;
+    right: 4px;
+    position: absolute;
+    width: 5px;
+    z-index: 999;
+}
+.headerCategories::before {
+    background-image: url(https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/catalog/view/theme/so-emarket/images/icon/icon-tit.png);
+    bottom: -24px;
+    content: "";
+    height: 32px;
+    left: 4px;
+    position: absolute;
+    width: 5px;
+    z-index: 999;
+}

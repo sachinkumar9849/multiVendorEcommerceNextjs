@@ -169,11 +169,11 @@ const MidHeader = () => {
     };
 
     return (
-        <div className="bg-gray-800 text-white py-[8px]">
+        <div className=" text-white py-[8px]">
             <div className="mx-auto max-w-7xl md:px-0 px-4">
                 <nav className="relative">
                     <div className="grid grid-cols-10">
-                        <div className="col-span-2">
+                        <div className="col-span-2 flex items-center">
                             <div className="">
                                 <Image src="/logo.png" className='w-[150px]' alt='log' width={800} height={800} />
                             </div>
