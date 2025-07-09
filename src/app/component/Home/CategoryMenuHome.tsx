@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ChevronRight, Package, ShoppingBag, Zap, Bath, Heart, Home, Wrench, Bed, Factory, Plus } from 'lucide-react';
 
 const CategoryMenuHome = () => {
-  const [activeCategory, setActiveCategory] = useState(true);
+  const [activeCategory, setActiveCategory] = useState(false);
 
   const categories = [
     {
@@ -31,7 +31,7 @@ const CategoryMenuHome = () => {
           'Punge nenune',
           'Qunge genga'
         ],
-       
+
       }
     },
     {
@@ -90,7 +90,7 @@ const CategoryMenuHome = () => {
           'Sound Systems',
           'Microphones'
         ]
-       
+
       }
     },
     {
@@ -239,16 +239,15 @@ const CategoryMenuHome = () => {
       {/* Left Sidebar */}
       <div className="w-full bg-white shadow-lg relative">
         {/* Header */}
-      
+
 
         {/* Category List */}
         <div className="py-2">
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${
-                activeCategory === category.id ? 'bg-gray-50 border-r-4 border-orange-500' : ''
-              }`}
+              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${activeCategory === category.id ? 'bg-gray-50 border-r-4 border-orange-500' : ''
+                }`}
               onMouseEnter={() => handleMouseEnter(category.id)}
               onMouseLeave={handleMouseLeave}
             >
@@ -261,13 +260,12 @@ const CategoryMenuHome = () => {
                 </span>
               </div>
               {category.hasSubmenu && (
-                <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${
-                  activeCategory === category.id ? 'text-orange-500 transform rotate-90' : 'text-gray-400'
-                }`} />
+                <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${activeCategory === category.id ? 'text-orange-500 transform rotate-90' : 'text-gray-400'
+                  }`} />
               )}
             </div>
           ))}
-          
+
           {/* More Categories */}
           <div className="flex items-center space-x-3 px-4 py-3 cursor-pointer text-orange-500 hover:bg-orange-50 transition-colors">
             <Plus className="w-5 h-5" />
@@ -279,8 +277,8 @@ const CategoryMenuHome = () => {
       {/* Main Content Area */}
       <div className="flex-1 relative">
         {/* Office Furniture Banner */}
-        
-     
+
+
         {activeCategory && (
           <div
             className="absolute top-0 left-0 w-[600px] h-full bg-white shadow-2xl z-10 p-8"

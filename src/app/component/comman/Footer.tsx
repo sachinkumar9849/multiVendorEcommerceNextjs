@@ -117,37 +117,7 @@ const Footer = () => {
         </div>
 
         {/* Payment Methods & Trust Badges */}
-        <div className="mt-12 pt-8 border-t border-gray-600">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-              <h5 className="text-sm font-semibold mb-3">We Accept</h5>
-              <div className="flex gap-3">
-                {['VISA', 'MC', 'AMEX', 'PAYPAL', 'APPLE PAY'].map((payment) => (
-                  <div 
-                    key={payment}
-                    className="bg-white/10 px-3 py-1 rounded text-xs font-medium"
-                  >
-                    {payment}
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h5 className="text-sm font-semibold mb-3">Secure Shopping</h5>
-              <div className="flex gap-3">
-                {['SSL SECURED', '256-BIT ENCRYPTION', 'PCI COMPLIANT'].map((badge) => (
-                  <div 
-                    key={badge}
-                    className="bg-green-600/20 text-green-400 px-3 py-1 rounded text-xs font-medium"
-                  >
-                    {badge}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+    
       </div>
 
       {/* Bottom Bar */}
@@ -155,7 +125,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-gray-300 text-sm">
-              <span>© 2024 ShopHub. Made with</span>
+              <span>© 2025 lorem ipsum. Made with</span>
               <Heart size={16} className="text-[#ff3b1f] fill-current" />
               <span>All rights reserved.</span>
             </div>

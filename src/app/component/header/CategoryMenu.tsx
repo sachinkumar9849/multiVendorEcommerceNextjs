@@ -54,7 +54,7 @@ const CategoryMenu = () => {
             </button>
             
             {activeMenu === category && (
-              <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md border border-gray-200 z-10">
+              <div className="absolute left-0 mt-2 w-56  shadow-lg rounded-md border border-gray-200">
                 <div className="p-2">
                   <h3 className="px-3 py-1 font-semibold text-gray-700 border-b border-gray-100">
                     {category}
