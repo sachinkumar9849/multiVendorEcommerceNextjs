@@ -8,6 +8,8 @@ import ProductImageSingle from "./component/Home/ProductImageSingle";
 import ProductListing from "./component/product/ProductListing";
 import Link from "next/link";
 import SectionTitle from "./component/comman/SectionTitle";
+import ProductImageThree from "./component/Home/ProductImageThree";
+import ProductListingNewItems from "./component/product/ProductListingNewItems";
 
 export default function Home() {
   return (
@@ -47,8 +49,20 @@ export default function Home() {
         <div className="col-span-2"></div>
         <div className="col-span-8">
 
-            <SectionTitle title="Trending items"/>
+           
           <ProductListing />
+        </div>
+      </div>
+      <div className="grid grid-cols-10 gap-6 mb-7">
+        <div className="col-span-2"></div>
+        <div className="col-span-8">
+          <ProductImageThree/>
+        </div>
+      </div>
+      <div className="grid grid-cols-10 gap-6 mb-7">
+        <div className="col-span-2"></div>
+        <div className="col-span-8">
+          <ProductListingNewItems/>
         </div>
       </div>
     </div>

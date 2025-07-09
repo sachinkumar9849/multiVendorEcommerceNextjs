@@ -67,21 +67,21 @@ const ProductCard = ({ product }: { product: Product }) => {
         )}
 
         {/* Discount Badge */}
-       
+
         {/* Hover Action Icons */}
         <div className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
           <button
             onClick={() => setIsLiked(!isLiked)}
             className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${isLiked
-                ? 'bg-red-500 text-white'
-                : 'bg-white/90 text-gray-700 hover:bg-white'
+              ? 'bg-red-500 text-white'
+              : 'bg-white/90 text-gray-700 hover:bg-white'
               }`}
             title="Add to Wishlist"
           >
             <Heart size={14} className={isLiked ? 'fill-current' : ''} />
           </button>
 
-        
+
           <button
             className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
             title="Add to Cart"
@@ -113,8 +113,8 @@ const ProductCard = ({ product }: { product: Product }) => {
                 key={i}
                 size={10}
                 className={`${i < Math.floor(product.rating)
-                    ? 'text-yellow-400 fill-current'
-                    : 'text-gray-300'
+                  ? 'text-yellow-400 fill-current'
+                  : 'text-gray-300'
                   }`}
               />
             ))}
@@ -146,7 +146,7 @@ const products: Product[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image: "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+    image: "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-600x600.jpg",
     rating: 4.8,
     reviewCount: 1247,
     badge: "Best Seller",
@@ -208,51 +208,18 @@ const products: Product[] = [
     category: "Bathroom"
   },
   {
-    id: 7,
-    name: "Modern Shower Caddy",
-    price: 45.99,
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=400&fit=crop",
-    rating: 4.3,
-    reviewCount: 234,
-    category: "Bathroom"
-  },
-  {
     id: 8,
-    name: "LED Bathroom Mirror",
-    price: 159.99,
-    originalPrice: 199.99,
-    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+    name: "Smart Fitness Watch",
+    price: 249.99,
+    image: "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
     rating: 4.7,
-    reviewCount: 567,
-    badge: "New",
+    reviewCount: 1834,
+    badge: "Featured",
     category: "Bathroom"
   },
-  // Bedroom
-  {
-    id: 9,
-    name: "Memory Foam Pillow",
-    price: 59.99,
-    originalPrice: 79.99,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-    rating: 4.6,
-    reviewCount: 789,
-    badge: "Best Seller",
-    category: "Bedroom"
-  },
-  {
-    id: 10,
-    name: "Silk Bedsheet Set",
-    price: 199.99,
-    originalPrice: 299.99,
-    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
-    rating: 4.8,
-    reviewCount: 456,
-    badge: "Featured",
-    category: "Bedroom"
-  }
 ];
 
-const ProductListing = () => {
+const ProductListingNewItems = () => {
   const [activeTab, setActiveTab] = useState("All");
 
   const tabs = [
@@ -262,7 +229,7 @@ const ProductListing = () => {
     "Decor",
     "Furniture",
     "Living Room",
-  
+
   ];
 
   const filteredProducts = activeTab === "All"
@@ -273,30 +240,39 @@ const ProductListing = () => {
     <div className="w-full max-w-7xl mx-auto ">
       {/* Header */}
       <div className="flex items-center ">
-        <SectionTitle title="Trending items" />
+        <SectionTitle title="NEW ITEMS" />
         {/* Tabs */}
-       
-          <div className="flex flex-wrap gap-2 w-full justify-end border-[#eee] border-b-2 mt-[-7px]">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`text-[#999] text-[14px] font-normal transition-all duration-200 border-b pl-3 ${activeTab === tab
-                    ? 'text-[#ff3b1f] border-[#ff3b1f] border-b-2'
-                    : 'text-gray-500 border-transparent hover:text-gray-700 '
-                  }`}
-              >
-                {tab}
-              </button>
-            ))}
-          
+
+        <div className="flex flex-wrap gap-2 w-full justify-end border-[#eee] border-b-2 mt-[-7px]">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`text-[#999] text-[14px] font-normal transition-all duration-200 border-b pl-3 ${activeTab === tab
+                ? 'text-[#ff3b1f] border-[#ff3b1f] border-b-2'
+                : 'text-gray-500 border-transparent hover:text-gray-700 '
+                }`}
+            >
+              {tab}
+            </button>
+          ))}
+
         </div>
       </div>
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-4" id="productLarge">
+           {filteredProducts.slice(0 ,1).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+        <div className="col-span-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            {filteredProducts.slice(1,7).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Results Count */}
@@ -310,4 +286,4 @@ const ProductListing = () => {
   );
 };
 
-export default ProductListing;
+export default ProductListingNewItems;

@@ -134,3 +134,7 @@ body {
 .read-the-docs {
   color: #888;
 }
+div#productLarge img {
+    height: 386px;
+    object-fit: cover;
+}
