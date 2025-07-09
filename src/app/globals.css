@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
 html {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
-body {
- 
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 body {
     color: #666;
+    background-color: #fff;
     font-size: 14px;
     line-height: 26px;
-    background-color: #fff;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
 }
 .borderRight::before {
     content: "";
@@ -43,3 +42,95 @@ body {
     z-index: 999;
 }
 
+.banners1 .b-img {
+    margin-bottom: 30px;
+}
+.banners > div a:before {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 0;
+    top: 0;
+    left: 50%;
+    content: "";
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.banners > div a:hover:before {
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.relative.group.cursor-pointer.rounded-lg.overflow-hidden.transition-all.duration-300.transform.hover\:scale-105.hover\:shadow-lg.bg-blue-50.hover\:bg-blue-100 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionTitle p span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    background-color: #232f3e;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 11px 20px;
+    position: relative;
+    display: inline-block;
+}
+.sectionTitle {
+    margin-bottom: 34px;
+}
+
+.sectionTitle {
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
