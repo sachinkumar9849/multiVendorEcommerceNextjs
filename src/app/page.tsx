@@ -10,9 +10,11 @@ import Link from "next/link";
 import SectionTitle from "./component/comman/SectionTitle";
 import ProductImageThree from "./component/Home/ProductImageThree";
 import ProductListingNewItems from "./component/product/ProductListingNewItems";
+import { FeaturesProduct } from "./component/product/FeaturesProduct";
 
 export default function Home() {
   return (
+    <>
     <div className="mx-auto max-w-7xl md:px-0 px-4">
       <div className="grid grid-cols-10 gap-6">
         <div className="col-span-2">
@@ -49,23 +51,26 @@ export default function Home() {
         <div className="col-span-2"></div>
         <div className="col-span-8">
 
-           
+
           <ProductListing />
         </div>
       </div>
       <div className="grid grid-cols-10 gap-6 mb-7">
         <div className="col-span-2"></div>
         <div className="col-span-8">
-          <ProductImageThree/>
+          <ProductImageThree />
         </div>
       </div>
       <div className="grid grid-cols-10 gap-6 mb-7">
         <div className="col-span-2"></div>
         <div className="col-span-8">
-          <ProductListingNewItems/>
+          <ProductListingNewItems />
         </div>
       </div>
+      
     </div>
+    <FeaturesProduct/>
+    </>
   );
 }
 
