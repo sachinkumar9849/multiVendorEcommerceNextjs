@@ -267,3 +267,18 @@ div#productLarge img {
 .padding {
     padding: 70px;
 }
+.subSection span::before {
+    content: "";
+    position: absolute;
+    background: #fe3f1f;
+    width: 91px;
+    height: 2px;
+    bottom: -2px;
+}
+
+.subSection {
+    margin-bottom: 35px;
+    position: relative;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 11px;
+}
