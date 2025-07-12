@@ -123,11 +123,11 @@ const ProductCard = ({ product }: { product: Product }) => {
 
         <div className="flex items-center gap-1">
           <span className="text-lg font-bold text-gray-900">
-            ${product.price}
+            Rs {product.price}
           </span>
           {product.originalPrice && (
             <span className="text-sm text-gray-500 line-through">
-              ${product.originalPrice}
+              Rs {product.originalPrice}
             </span>
           )}
         </div>
@@ -285,7 +285,7 @@ const ProductListing = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`text-[#999] text-[14px] font-normal transition-all duration-200 border-b pl-3 ${
+              className={`text-[#999] text-[14px] font-normal transition-all duration-200 border-b pl-3 Rs {
                 activeTab === tab
                   ? "text-[#ff3b1f] border-[#ff3b1f] border-b-2"
                   : "text-gray-500 border-transparent hover:text-gray-700 "

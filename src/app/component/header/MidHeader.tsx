@@ -68,22 +68,22 @@ const menuItems: MenuItem[] = [
       {
         title: "Premium Headphones",
 
-        price: "$299",
-        originalPrice: "$399",
+        price: "Rs 299",
+        originalPrice: "Rs 399",
         rating: 4.8,
         badge: "Best Seller",
       },
       {
         title: "Smart Watch Pro",
 
-        price: "$449",
+        price: "Rs 449",
         rating: 4.9,
         badge: "New",
       },
       {
         title: "Ultra Laptop",
 
-        price: "$1,299",
+        price: "Rs 1,299",
         rating: 4.7,
       },
     ],
@@ -115,15 +115,15 @@ const menuItems: MenuItem[] = [
       {
         title: "Premium Leather Bag",
 
-        price: "$189",
-        originalPrice: "$249",
+        price: "Rs 189",
+        originalPrice: "Rs 249",
         rating: 4.6,
         badge: "Limited",
       },
       {
         title: "Sport Sneakers",
 
-        price: "$129",
+        price: "Rs 129",
         rating: 4.8,
       },
     ],
@@ -161,7 +161,7 @@ const menuItems: MenuItem[] = [
       {
         title: "Luxury Perfume",
 
-        price: "$85",
+        price: "Rs 85",
         rating: 4.9,
         badge: "Exclusive",
       },
@@ -367,7 +367,7 @@ export default function MegaMenu() {
                     <div className="grid grid-cols-1 gap-3">
                       <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                         <Truck className="h-4 w-4 text-ecom-primary" />
-                        <span>Free shipping on orders over $50</span>
+                        <span>Free shipping on orders over Rs 50</span>
                       </div>
                       <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                         <Shield className="h-4 w-4 text-ecom-primary" />

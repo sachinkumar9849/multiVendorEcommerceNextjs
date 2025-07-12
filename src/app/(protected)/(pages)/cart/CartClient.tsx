@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CartItem } from "@/app/component/product/cart/CartItem";
 import EmptyCart from "@/app/component/product/cart/EmptyCart";
 import { ShoppingBag, CreditCard, Shield, Truck } from "lucide-react";
+import Link from "next/link";
 
 interface CartClientProps {
   initialItems: {
@@ -73,7 +74,7 @@ export const CartClient = ({ initialItems }: CartClientProps) => {
             <div className="flex justify-between items-center py-2 border-b border-gray-100">
               <span className="text-gray-600">Subtotal</span>
               <span className="font-semibold text-gray-900">
-                ${subtotal.toFixed(2)}
+                Rs {subtotal.toFixed(2)}
               </span>
             </div>
             <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -83,7 +84,7 @@ export const CartClient = ({ initialItems }: CartClientProps) => {
             <div className="flex justify-between items-center py-3 bg-gray-50 rounded-lg px-4">
               <span className="text-lg font-semibold text-gray-900">Total</span>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                ${subtotal.toFixed(2)}
+                Rs {subtotal.toFixed(2)}
               </span>
             </div>
           </div>
@@ -102,19 +103,21 @@ export const CartClient = ({ initialItems }: CartClientProps) => {
           </div>
 
           {/* Checkout button */}
-          <Button
-            className="w-full bg-gradient-to-r bg-[#222f3e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 mb-4"
-            size="lg"
-          >
-            <CreditCard className="h-5 w-5 mr-2" />
-            Proceed to Checkout
-          </Button>
+          <Link href="/checkout">
+            <Button
+              className="w-full bg-gradient-to-r bg-[#222f3e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 mb-4"
+              size="lg"
+            >
+              <CreditCard className="h-5 w-5 mr-2" />
+              Proceed to Checkout
+            </Button>
+          </Link>
 
           {/* Additional info */}
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-sm text-gray-600">
               <Truck className="h-4 w-4 text-blue-500" />
-              <span>Free shipping on orders over $50</span>
+              <span>Free shipping on orders over Rs 50</span>
             </div>
             <div className="flex items-center gap-3 text-sm text-gray-600">
               <Shield className="h-4 w-4 text-green-500" />

@@ -103,11 +103,11 @@ export const ProductCard = ({
 
             <div className="flex items-center gap-2">
               <span className="text-[16px] font-bold text-primary">
-                ${price.toFixed(2)}
+                Rs {price.toFixed(2)}
               </span>
               {originalPrice && (
                 <span className="text-[14px] text-muted-foreground line-through">
-                  ${originalPrice.toFixed(2)}
+                  Rs {originalPrice.toFixed(2)}
                 </span>
               )}
             </div>

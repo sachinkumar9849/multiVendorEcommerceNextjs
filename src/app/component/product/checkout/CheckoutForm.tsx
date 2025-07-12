@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CreditCard, Lock, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 interface CheckoutFormProps {
   onNext: () => void;
@@ -130,7 +131,7 @@ export function CheckoutForm({ onNext }: CheckoutFormProps) {
                   id="city"
                   value={formData.city}
                   onChange={(e) => handleInputChange("city", e.target.value)}
-                  placeholder="New York"
+                  placeholder="Kathmandu Nepal"
                   className="mt-1 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
                   required
                 />
@@ -144,7 +145,7 @@ export function CheckoutForm({ onNext }: CheckoutFormProps) {
                     <SelectValue placeholder="Select state" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ny">New York</SelectItem>
+                    <SelectItem value="ny">Kathmandu Nepal</SelectItem>
                     <SelectItem value="ca">California</SelectItem>
                     <SelectItem value="tx">Texas</SelectItem>
                     <SelectItem value="fl">Florida</SelectItem>
@@ -261,14 +262,15 @@ export function CheckoutForm({ onNext }: CheckoutFormProps) {
       </Card>
 
       {/* Submit Button */}
-      <Button
-        type="submit"
-        className="w-full bg-[#010101] hover:opacity-90 text-lg py-6 transition-all duration-300 hover:shadow-large"
-      >
-        <Lock className="mr-2 h-5 w-5" />
-        Complete Order
-      </Button>
-
+      <Link href="/success">
+        <Button
+          type="submit"
+          className="w-full bg-[#010101] hover:opacity-90 text-lg py-6 transition-all duration-300 hover:shadow-large"
+        >
+          <Lock className="mr-2 h-5 w-5" />
+          Complete Order
+        </Button>
+      </Link>
       <p className="text-center text-sm text-muted-foreground">
         By placing your order, you agree to our{" "}
         <a href="#" className="text-[#ff3b1f] hover:underline">

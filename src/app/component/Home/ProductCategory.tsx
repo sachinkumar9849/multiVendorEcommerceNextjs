@@ -96,7 +96,7 @@ const ProductCategory = () => {
         {categories.map((category: CategoryProps) => (
           <div
             key={category.id}
-            className={`flex justify-center items-center flex-col relative group cursor-pointer rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${category.bgColor} ${category.hoverColor}`}
+            className={`flex justify-center items-center flex-col relative group cursor-pointer rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg Rs {category.bgColor} ${category.hoverColor}`}
             onMouseLeave={() => setHoveredCategory(null)}
           >
             <div className="aspect-square bg-white rounded-lg mx-4 mt-4 mb-2 overflow-hidden shadow-sm h-[50px]">

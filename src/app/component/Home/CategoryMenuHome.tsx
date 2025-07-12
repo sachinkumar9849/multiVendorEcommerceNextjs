@@ -175,7 +175,7 @@ const CategoryMenuHome = () => {
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${
+              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 Rs{
                 activeCategory === category.id
                   ? "bg-gray-50 border-r-4 border-orange-500"
                   : ""

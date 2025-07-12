@@ -187,8 +187,8 @@ const FilterSidebar = () => {
                   className="w-full"
                 />
                 <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <span>${priceRange.min}</span>
-                  <span>${priceRange.max}</span>
+                  <span>Rs {priceRange.min}</span>
+                  <span>Rs {priceRange.max}</span>
                 </div>
               </div>
             </div>
@@ -281,7 +281,7 @@ const FilterSidebar = () => {
                         selectedRating === rating ? null : rating,
                       )
                     }
-                    className={`flex items-center w-full p-2 rounded-md text-left transition-colors ${
+                    className={`flex items-center w-full p-2 rounded-md text-left transition-colors Rs {
                       selectedRating === rating
                         ? "bg-primary text-primary-foreground"
                         : "hover:bg-filter-item-hover"
@@ -291,7 +291,7 @@ const FilterSidebar = () => {
                       {[...Array(5)].map((_, i) => (
                         <span
                           key={i}
-                          className={`text-sm ${
+                          className={`text-sm Rs {
                             i < rating
                               ? selectedRating === rating
                                 ? "text-primary-foreground"
@@ -326,7 +326,7 @@ const FilterSidebar = () => {
                         !selectedColors.includes(color.id),
                       )
                     }
-                    className={`flex flex-col items-center p-2 rounded-md border-2 transition-all ${
+                    className={`flex flex-col items-center p-2 rounded-md border-2 transition-all Rs {
                       selectedColors.includes(color.id)
                         ? "border-primary bg-primary/10"
                         : "border-border hover:border-primary/50"
@@ -358,7 +358,7 @@ const FilterSidebar = () => {
                     onClick={() =>
                       handleSizeChange(size, !selectedSizes.includes(size))
                     }
-                    className={`p-2 text-sm border rounded-md transition-all ${
+                    className={`p-2 text-sm border rounded-md transition-all Rs {
                       selectedSizes.includes(size)
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-border text-foreground hover:border-primary"
