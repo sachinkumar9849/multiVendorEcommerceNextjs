@@ -248,7 +248,7 @@ export default function MegaMenu() {
               <div className="login-form flex justify-end">
                 <div className="relative borderRight flex items-center text-white">
                   <LockKeyhole size={14} />
-                  <Link href={""} className="ml-1">
+                  <Link href="/login" className="ml-1">
                     Login
                   </Link>{" "}
                   <span className="px-2"> or </span>{" "}

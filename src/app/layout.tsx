@@ -23,11 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <Nav />
-        {children}
-        <Footer />
-      </body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

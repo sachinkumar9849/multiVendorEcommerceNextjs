@@ -1,18 +1,18 @@
 import Image from "next/image";
 
-import CategoryMenuHome from "./component/Home/CategoryMenuHome";
-import HomePageBanner from "./component/Home/HomePageBanner";
-import ProductImage from "./component/Home/ProductImage";
-import ProductCategory from "./component/Home/ProductCategory";
-import ProductImageSingle from "./component/Home/ProductImageSingle";
-import ProductListing from "./component/product/ProductListing";
+import CategoryMenuHome from "../component/Home/CategoryMenuHome";
+import HomePageBanner from "../component/Home/HomePageBanner";
+import ProductImage from "../component/Home/ProductImage";
+import ProductCategory from "../component/Home/ProductCategory";
+import ProductImageSingle from "../component/Home/ProductImageSingle";
+import ProductListing from "../component/product/ProductListing";
 import Link from "next/link";
-import ProductImageThree from "./component/Home/ProductImageThree";
-import ProductListingNewItems from "./component/product/ProductListingNewItems";
-import { FeaturesProduct } from "./component/product/FeaturesProduct";
-import LatestProduct from "./component/product/LatestProduct";
-import FreeDelivery from "./component/comman/FreeDelivery";
-import TopRated from "./component/product/TopRated";
+import ProductImageThree from "../component/Home/ProductImageThree";
+import ProductListingNewItems from "../component/product/ProductListingNewItems";
+import { FeaturesProduct } from "../component/product/FeaturesProduct";
+import LatestProduct from "../component/product/LatestProduct";
+import FreeDelivery from "../component/comman/FreeDelivery";
+import TopRated from "../component/product/TopRated";
 
 export default function Home() {
   return (

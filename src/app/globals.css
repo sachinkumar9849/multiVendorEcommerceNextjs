@@ -284,3 +284,13 @@ div#productLarge img {
   border-bottom: 2px solid #eee;
   padding-bottom: 11px;
 }
+.loginBg::before {
+  content: "";
+  background: #1c2e92f2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
