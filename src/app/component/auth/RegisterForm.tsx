@@ -1,15 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Eye,
-  EyeOff,
-  Mail,
-  Lock,
-  ShoppingBag,
-  ArrowRight,
-  User,
-  Phone,
-} from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, ArrowRight, User, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -17,7 +8,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -194,7 +184,7 @@ const RegisterForm = () => {
               </div>
 
               <div className="text-center text-sm text-gray-600">
-                Don't have an account?{" "}
+                Don have an account?{" "}
                 <Link
                   href="/login"
                   className="text-primary hover:text-primary/80 font-medium transition-colors"

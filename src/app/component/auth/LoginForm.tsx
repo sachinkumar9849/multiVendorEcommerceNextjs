@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Eye, EyeOff, Mail, Lock, ShoppingBag, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -169,7 +169,7 @@ const LoginForm = () => {
               </div>
 
               <div className="text-center text-sm text-gray-600">
-                Don't have an account?{" "}
+                Don have an account?{" "}
                 <Link
                   href="/register"
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
