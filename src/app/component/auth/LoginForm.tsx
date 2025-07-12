@@ -26,7 +26,7 @@ const LoginForm = () => {
     <div className="min-h-screen flex">
       <div className="flex-1 flex items-center justify-center p-8 bg-gradient-hero">
         <div className="w-full max-w-md animate-fade-in">
-          <Card className="shadow-elegant border-0 bg-white/95 backdrop-blur-sm">
+          <Card className="shadow-elegant border-0 bg-white/95 backdrop-blur-sm py-6">
             <CardHeader className="space-y-6 text-center">
               <div className="flex items-center justify-center space-x-2 bg-[#222f3e] w-[200px] p-[10px] rounded-md mx-auto">
                 <Link href={"/"}>
@@ -53,14 +53,14 @@ const LoginForm = () => {
                     Email Address
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                    <Mail className="absolute left-3 top-[16px] h-4 w-4 text-gray-400" />
                     <Input
                       id="email"
                       type="email"
                       placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="pl-10 h-12 border-gray-200 focus:border-primary focus:ring-primary"
+                      className="pl-10 h-12  border-gray-200 focus:border-primary focus:ring-primary"
                     />
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const LoginForm = () => {
                     Password
                   </label>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                    <Lock className="absolute left-3 top-[16px] h-4 w-4 text-gray-400" />
                     <Input
                       id="password"
                       type={showPassword ? "text" : "password"}
@@ -114,13 +114,15 @@ const LoginForm = () => {
               </div>
 
               <div className="space-y-4">
-                <Button
-                  size="lg"
-                  className="w-full h-12 text-base font-semibold bg-[#222f3e]"
-                >
-                  Sign In
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <Link href="/register">
+                  <Button
+                    size="lg"
+                    className="w-full h-12 text-base font-semibold bg-[#222f3e]"
+                  >
+                    Sign In
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
 
                 <div className="relative">
                   <Separator className="my-4" />
@@ -168,12 +170,12 @@ const LoginForm = () => {
 
               <div className="text-center text-sm text-gray-600">
                 Don't have an account?{" "}
-                <a
-                  href="#"
+                <Link
+                  href="/register"
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
                   Sign up now
-                </a>
+                </Link>
               </div>
             </CardContent>
           </Card>

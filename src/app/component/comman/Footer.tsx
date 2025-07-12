@@ -9,6 +9,7 @@ import {
   Youtube,
   Heart,
 } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -36,7 +37,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h4 className="text-xl font-bold text-[#ff3b1f] mb-4">ShopHub</h4>
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={400}
+              height={400}
+              className="w-[200px]"
+            />
             <p className="text-gray-300 text-sm leading-relaxed">
               Your trusted online shopping destination for quality products at
               unbeatable prices. We are committed to delivering excellence in
