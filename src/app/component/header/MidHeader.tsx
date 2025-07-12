@@ -218,13 +218,15 @@ export default function MegaMenu() {
           <div className="grid grid-cols-10 items-center">
             <div className="col-span-2 flex items-center">
               <div className="">
-                <Image
-                  src="/logo.png"
-                  className="w-[150px]"
-                  alt="log"
-                  width={800}
-                  height={800}
-                />
+                <Link href="/">
+                  <Image
+                    src="/logo.png"
+                    className="w-[150px]"
+                    alt="log"
+                    width={800}
+                    height={800}
+                  />
+                </Link>
               </div>
             </div>
             <div className="col-span-4">

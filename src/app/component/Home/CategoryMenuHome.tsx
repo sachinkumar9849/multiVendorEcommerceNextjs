@@ -14,6 +14,7 @@ import {
   Plus,
 } from "lucide-react";
 import { Category } from "@/app/Types/other";
+import Link from "next/link";
 
 const CategoryMenuHome = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -236,12 +237,12 @@ const CategoryMenuHome = () => {
                   <ul className="space-y-3">
                     {items.map((item, index) => (
                       <li key={index}>
-                        <a
-                          href="#"
+                        <Link
+                          href="/product"
                           className="text-gray-600 hover:text-orange-500 transition-colors duration-200 text-sm"
                         >
                           {item}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

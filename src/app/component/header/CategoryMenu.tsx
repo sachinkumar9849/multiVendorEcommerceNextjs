@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const CategoryMenu = () => {
@@ -52,12 +53,12 @@ const CategoryMenu = () => {
                   <ul className="py-1">
                     {subcategories.map((subcategory) => (
                       <li key={subcategory}>
-                        <a
-                          href="#"
+                        <Link
+                          href="/product"
                           className="block px-3 py-2 text-gray-600 hover:bg-gray-50 rounded"
                         >
                           {subcategory}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

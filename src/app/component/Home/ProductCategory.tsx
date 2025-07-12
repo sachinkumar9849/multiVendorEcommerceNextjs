@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import SectionTitle from "../comman/SectionTitle";
+import Link from "next/link";
 
 interface CategoryProps {
   id: number;
@@ -100,18 +101,22 @@ const ProductCategory = () => {
           >
             <div className="aspect-square bg-white rounded-lg mx-4 mt-4 mb-2 overflow-hidden shadow-sm h-[50px]">
               <div className="w-full  h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-16 h-16 object-contain"
-                />
+                <Link href="/product">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-16 h-16 object-contain"
+                  />
+                </Link>
               </div>
             </div>
 
             <div className="px-4 pb-4">
-              <h3 className="text-sm font-medium text-gray-900 text-center leading-tight">
-                {category.name}
-              </h3>
+              <Link href="/product">
+                <h3 className="text-sm font-medium text-gray-900 text-center leading-tight">
+                  {category.name}
+                </h3>
+              </Link>
             </div>
 
             <div

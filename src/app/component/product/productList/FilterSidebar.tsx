@@ -172,7 +172,7 @@ const FilterSidebar = () => {
         </div>
       </div>
 
-      <div className="max-h-[calc(100vh-200px)] overflow-y-auto">
+      <div className="">
         {/* Price Range */}
         <div className="border-b border-filter-border">
           {renderSectionHeader(sections.find((s) => s.id === "price")!)}
