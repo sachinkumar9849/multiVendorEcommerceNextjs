@@ -270,7 +270,7 @@ export default function MegaMenu() {
       </nav>
       {activeMenu && (
         <div
-          className="megaMenu bg-white absolute top-full left-0 w-full backdrop-blur-md border-border/40 shadow-mega z-40 animate-mega-slide-down"
+          className="megaMenu z-40 bg-white absolute top-full left-0 w-full backdrop-blur-md border-border/40 shadow-mega z-40 animate-mega-slide-down"
           onMouseEnter={() => setActiveMenu(activeMenu)}
           onMouseLeave={handleMenuLeave}
         >
@@ -289,12 +289,12 @@ export default function MegaMenu() {
                           <ul className="space-y-2">
                             {category.items.map((subItem, subIdx) => (
                               <li key={subIdx}>
-                                <a
-                                  href="#"
-                                  className="text-muted-foreground hover:text-ecom-primary transition-colors duration-200 text-sm"
+                                <Link
+                                  href="/product"
+                                  className="text-muted-foreground hover:text-ecom-primary text-sm hover:text-[#ff3b1f] hover:pl-[2px] transition-all duration-200"
                                 >
                                   {subItem}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -304,7 +304,7 @@ export default function MegaMenu() {
                   </div>
                   <div className="col-span-4 space-y-6">
                     {item.featured && item.featured.length > 0 && (
-                      <div className="bg-gradient-card rounded-xl p-6 border border-border/40">
+                      <div className="bg-gradient-card rounded-xl p-6 border border-border/40 z-9">
                         <h3 className="font-semibold text-ecom-dark mb-4">
                           Featured Products
                         </h3>
@@ -314,9 +314,17 @@ export default function MegaMenu() {
                               key={idx}
                               className="flex items-center space-x-3 group cursor-pointer"
                             >
-                              <div className="relative"></div>
+                              <div className="relative">
+                                <Link href="/product">
+                                  <img
+                                    className=""
+                                    alt="img"
+                                    src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-80x80.jpg"
+                                  />
+                                </Link>
+                              </div>
                               <div className="flex-1">
-                                <h4 className="font-medium text-sm text-ecom-dark group-hover:text-ecom-primary transition-colors">
+                                <h4 className="font-medium text-sm text-ecom-dark group-hover:text-ecom-primary transition-colors hover:text-red-600">
                                   {product.title}
                                 </h4>
                                 <div className="flex items-center space-x-1 mt-1">
@@ -343,7 +351,7 @@ export default function MegaMenu() {
                     )}
 
                     {item.promo && (
-                      <div className="bg-gradient-primary rounded-xl p-6 text-white relative overflow-hidden">
+                      <div className="bg-[#222f3e] bg-gradient-primary rounded-xl p-6 text-white relative overflow-hidden">
                         <div className="relative z-10">
                           <h3 className="font-bold text-xl mb-2">
                             {item.promo.title}
