@@ -1,230 +1,159 @@
 "use client";
-import React, { useState } from 'react';
-import { ChevronRight, Package, ShoppingBag, Zap, Bath, Heart, Home, Wrench, Bed, Factory, Plus } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  ChevronRight,
+  Package,
+  ShoppingBag,
+  Zap,
+  Bath,
+  Heart,
+  Home,
+  Wrench,
+  Bed,
+  Factory,
+  Plus,
+} from "lucide-react";
+import { Category } from "@/app/Types/other";
 
 const CategoryMenuHome = () => {
-  const [activeCategory, setActiveCategory] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const categories = [
+  const categories: Category[] = [
     {
-      id: 'fashion',
-      name: 'Fashion & Accessories',
+      id: "fashion",
+      name: "Fashion & Accessories",
       icon: <Package className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'FASHION': [
-          'Accessories',
-          'Bags',
-          'Jewelry',
-          "Men's Clothing",
-          'Shoes'
+        FASHION: ["Accessories", "Bags", "Jewelry", "Men's Clothing", "Shoes"],
+        ELECTRONICS: ["Asdipiscing", "Consectetur", "Diam sit"],
+        "TOWELS CLOUD": [
+          "Appliances",
+          "Furniture & Decors",
+          "Lamp & Lighting",
+          "Punge nenune",
+          "Qunge genga",
         ],
-        'ELECTRONICS': [
-          'Asdipiscing',
-          'Consectetur',
-          'Diam sit'
-        ],
-        'TOWELS CLOUD': [
-          'Appliances',
-          'Furniture & Decors',
-          'Lamp & Lighting',
-          'Punge nenune',
-          'Qunge genga'
-        ],
-
-      }
+      },
     },
     {
-      id: 'bags',
-      name: 'Bags & Shoes',
+      id: "bags",
+      name: "Bags & Shoes",
       icon: <ShoppingBag className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'BAGS': [
-          'Backpacks',
-          'Handbags',
-          'Travel Bags',
-          'Laptop Bags',
-          'Clutches'
+        BAGS: [
+          "Backpacks",
+          "Handbags",
+          "Travel Bags",
+          "Laptop Bags",
+          "Clutches",
         ],
-        'SHOES': [
-          'Sneakers',
-          'Formal Shoes',
-          'Sandals',
-          'Boots',
-          'Sports Shoes'
-        ],
-        'ACCESSORIES': [
-          'Belts',
-          'Wallets',
-          'Sunglasses',
-          'Watches',
-          'Jewelry'
-        ]
-      }
+        SHOES: ["Sneakers", "Formal Shoes", "Sandals", "Boots", "Sports Shoes"],
+        ACCESSORIES: ["Belts", "Wallets", "Sunglasses", "Watches", "Jewelry"],
+      },
     },
     {
-      id: 'electronics',
-      name: 'Optimum Electronics',
+      id: "electronics",
+      name: "Optimum Electronics",
       icon: <Zap className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'SMARTPHONES': [
-          'iPhone',
-          'Samsung',
-          'OnePlus',
-          'Google Pixel',
-          'Xiaomi'
+        SMARTPHONES: ["iPhone", "Samsung", "OnePlus", "Google Pixel", "Xiaomi"],
+        LAPTOPS: ["MacBook", "Dell", "HP", "Lenovo", "Asus"],
+        AUDIO: [
+          "Headphones",
+          "Speakers",
+          "Earbuds",
+          "Sound Systems",
+          "Microphones",
         ],
-        'LAPTOPS': [
-          'MacBook',
-          'Dell',
-          'HP',
-          'Lenovo',
-          'Asus'
-        ],
-        'AUDIO': [
-          'Headphones',
-          'Speakers',
-          'Earbuds',
-          'Sound Systems',
-          'Microphones'
-        ]
-
-      }
+      },
     },
     {
-      id: 'bathroom',
-      name: 'Bathroom',
+      id: "bathroom",
+      name: "Bathroom",
       icon: <Bath className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'FIXTURES': [
-          'Faucets',
-          'Showers',
-          'Toilets',
-          'Sinks',
-          'Bathtubs'
+        FIXTURES: ["Faucets", "Showers", "Toilets", "Sinks", "Bathtubs"],
+        ACCESSORIES: [
+          "Towel Racks",
+          "Mirrors",
+          "Soap Dispensers",
+          "Toilet Paper Holders",
+          "Shower Curtains",
         ],
-        'ACCESSORIES': [
-          'Towel Racks',
-          'Mirrors',
-          'Soap Dispensers',
-          'Toilet Paper Holders',
-          'Shower Curtains'
-        ],
-        'STORAGE': [
-          'Cabinets',
-          'Shelves',
-          'Organizers',
-          'Baskets',
-          'Vanities'
-        ]
-      }
+        STORAGE: ["Cabinets", "Shelves", "Organizers", "Baskets", "Vanities"],
+      },
     },
     {
-      id: 'health',
-      name: 'Health & Beauty',
+      id: "health",
+      name: "Health & Beauty",
       icon: <Heart className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'SKINCARE': [
-          'Cleansers',
-          'Moisturizers',
-          'Serums',
-          'Sunscreen',
-          'Face Masks'
+        SKINCARE: [
+          "Cleansers",
+          "Moisturizers",
+          "Serums",
+          "Sunscreen",
+          "Face Masks",
         ],
-        'MAKEUP': [
-          'Foundation',
-          'Lipstick',
-          'Eyeshadow',
-          'Mascara',
-          'Brushes'
+        MAKEUP: ["Foundation", "Lipstick", "Eyeshadow", "Mascara", "Brushes"],
+        HEALTH: [
+          "Vitamins",
+          "Supplements",
+          "First Aid",
+          "Thermometers",
+          "Blood Pressure",
         ],
-        'HEALTH': [
-          'Vitamins',
-          'Supplements',
-          'First Aid',
-          'Thermometers',
-          'Blood Pressure'
-        ]
-      }
+      },
     },
     {
-      id: 'home',
-      name: 'Home & Lights',
+      id: "home",
+      name: "Home & Lights",
       icon: <Home className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'LIGHTING': [
-          'Ceiling Lights',
-          'Table Lamps',
-          'Floor Lamps',
-          'Wall Sconces',
-          'LED Bulbs'
+        LIGHTING: [
+          "Ceiling Lights",
+          "Table Lamps",
+          "Floor Lamps",
+          "Wall Sconces",
+          "LED Bulbs",
         ],
-        'DECOR': [
-          'Wall Art',
-          'Vases',
-          'Candles',
-          'Cushions',
-          'Rugs'
-        ],
-        'KITCHEN': [
-          'Appliances',
-          'Cookware',
-          'Tableware',
-          'Storage',
-          'Utensils'
-        ]
-      }
+        DECOR: ["Wall Art", "Vases", "Candles", "Cushions", "Rugs"],
+        KITCHEN: ["Appliances", "Cookware", "Tableware", "Storage", "Utensils"],
+      },
     },
     {
-      id: 'metallurgy',
-      name: 'Metallurgy',
+      id: "metallurgy",
+      name: "Metallurgy",
       icon: <Wrench className="w-5 h-5" />,
-      hasSubmenu: false
+      hasSubmenu: false,
     },
     {
-      id: 'bedroom',
-      name: 'Bedroom',
+      id: "bedroom",
+      name: "Bedroom",
       icon: <Bed className="w-5 h-5" />,
       hasSubmenu: true,
       subcategories: {
-        'FURNITURE': [
-          'Beds',
-          'Dressers',
-          'Nightstands',
-          'Wardrobes',
-          'Mirrors'
-        ],
-        'BEDDING': [
-          'Sheets',
-          'Pillows',
-          'Comforters',
-          'Blankets',
-          'Mattresses'
-        ],
-        'DECOR': [
-          'Curtains',
-          'Lamps',
-          'Wall Art',
-          'Plants',
-          'Storage'
-        ]
-      }
+        FURNITURE: ["Beds", "Dressers", "Nightstands", "Wardrobes", "Mirrors"],
+        BEDDING: ["Sheets", "Pillows", "Comforters", "Blankets", "Mattresses"],
+        DECOR: ["Curtains", "Lamps", "Wall Art", "Plants", "Storage"],
+      },
     },
     {
-      id: 'industrial',
-      name: 'Industrial Parts',
+      id: "industrial",
+      name: "Industrial Parts",
       icon: <Factory className="w-5 h-5" />,
-      hasSubmenu: false
-    }
+      hasSubmenu: false,
+    },
   ];
 
-  const handleMouseEnter = (categoryId) => {
-    const category = categories.find(cat => cat.id === categoryId);
+  const handleMouseEnter = (categoryId: string) => {
+    const category = categories.find((cat) => cat.id === categoryId);
     if (category && category.hasSubmenu) {
       setActiveCategory(categoryId);
     }
@@ -240,28 +169,39 @@ const CategoryMenuHome = () => {
       <div className="w-full bg-white shadow-lg relative">
         {/* Header */}
 
-
         {/* Category List */}
         <div className="py-2">
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${activeCategory === category.id ? 'bg-gray-50 border-r-4 border-orange-500' : ''
-                }`}
+              className={`relative flex items-center justify-between px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${
+                activeCategory === category.id
+                  ? "bg-gray-50 border-r-4 border-orange-500"
+                  : ""
+              }`}
               onMouseEnter={() => handleMouseEnter(category.id)}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center space-x-3">
-                <span className={`${activeCategory === category.id ? 'text-orange-500' : 'text-gray-500'}`}>
+                <span
+                  className={`${activeCategory === category.id ? "text-orange-500" : "text-gray-500"}`}
+                >
                   {category.icon}
                 </span>
-                <span className={`text-sm font-medium ${activeCategory === category.id ? 'text-orange-500' : 'text-gray-700'}`}>
+                <span
+                  className={`text-sm font-medium ${activeCategory === category.id ? "text-orange-500" : "text-gray-700"}`}
+                >
                   {category.name}
                 </span>
               </div>
               {category.hasSubmenu && (
-                <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${activeCategory === category.id ? 'text-orange-500 transform rotate-90' : 'text-gray-400'
-                  }`} />
+                <ChevronRight
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    activeCategory === category.id
+                      ? "text-orange-500 transform rotate-90"
+                      : "text-gray-400"
+                  }`}
+                />
               )}
             </div>
           ))}
@@ -278,7 +218,6 @@ const CategoryMenuHome = () => {
       <div className="flex-1 relative">
         {/* Office Furniture Banner */}
 
-
         {activeCategory && (
           <div
             className="absolute top-0 left-0 w-[600px] h-full bg-white shadow-2xl z-10 p-8"
@@ -286,7 +225,10 @@ const CategoryMenuHome = () => {
             onMouseLeave={handleMouseLeave}
           >
             <div className="grid grid-cols-3 gap-12 max-w-6xl">
-              {Object.entries(categories.find(cat => cat.id === activeCategory)?.subcategories || {}).map(([sectionName, items]) => (
+              {Object.entries(
+                categories.find((cat) => cat.id === activeCategory)
+                  ?.subcategories || {},
+              ).map(([sectionName, items]) => (
                 <div key={sectionName} className="space-y-4">
                   <h3 className="text-lg font-bold text-gray-800 border-b border-gray-200 pb-2">
                     {sectionName}

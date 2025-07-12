@@ -7,11 +7,9 @@ import ProductCategory from "./component/Home/ProductCategory";
 import ProductImageSingle from "./component/Home/ProductImageSingle";
 import ProductListing from "./component/product/ProductListing";
 import Link from "next/link";
-import SectionTitle from "./component/comman/SectionTitle";
 import ProductImageThree from "./component/Home/ProductImageThree";
 import ProductListingNewItems from "./component/product/ProductListingNewItems";
 import { FeaturesProduct } from "./component/product/FeaturesProduct";
-import { Star, StarHalf, Sparkles } from 'lucide-react';
 import LatestProduct from "./component/product/LatestProduct";
 import FreeDelivery from "./component/comman/FreeDelivery";
 import TopRated from "./component/product/TopRated";
@@ -39,8 +37,13 @@ export default function Home() {
             <ProductCategory />
             <div className="banners banners1 pt-11">
               <div className="b-img relative">
-                <Link href="#" >
-                  <Image src="/large1.jpg" alt="img" width={1920} height={300} />
+                <Link href="#">
+                  <Image
+                    src="/large1.jpg"
+                    alt="img"
+                    width={1920}
+                    height={300}
+                  />
                 </Link>
               </div>
             </div>
@@ -51,7 +54,6 @@ export default function Home() {
             {/* top rated product  */}
             <div className="mt-[-111px]">
               <LatestProduct />
-
             </div>
 
             {/* top reated product  */}
@@ -73,7 +75,7 @@ export default function Home() {
         <div className="grid grid-cols-10 gap-6 mb-7">
           <div className="col-span-2">
             <div className="mt-[-140px]">
-              <TopRated/>
+              <TopRated />
             </div>
           </div>
           <div className="col-span-8">
@@ -82,9 +84,6 @@ export default function Home() {
         </div>
       </div>
       <FeaturesProduct />
-
     </>
   );
 }
-
-
