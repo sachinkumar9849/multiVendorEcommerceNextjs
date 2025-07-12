@@ -13,6 +13,8 @@ import ProductListingNewItems from "./component/product/ProductListingNewItems";
 import { FeaturesProduct } from "./component/product/FeaturesProduct";
 import { Star, StarHalf, Sparkles } from 'lucide-react';
 import LatestProduct from "./component/product/LatestProduct";
+import FreeDelivery from "./component/comman/FreeDelivery";
+import TopRated from "./component/product/TopRated";
 
 export default function Home() {
   return (
@@ -47,9 +49,10 @@ export default function Home() {
         <div className="grid grid-cols-10 gap-6 mb-7">
           <div className="col-span-2">
             {/* top rated product  */}
-           <div className="mt-[-111px]">
-            <LatestProduct/>
-           </div>
+            <div className="mt-[-111px]">
+              <LatestProduct />
+
+            </div>
 
             {/* top reated product  */}
           </div>
@@ -58,19 +61,28 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-10 gap-6 mb-7">
-          <div className="col-span-2"></div>
+          <div className="col-span-2">
+            <div className="mt-[-200px]">
+              <FreeDelivery />
+            </div>
+          </div>
           <div className="col-span-8">
             <ProductImageThree />
           </div>
         </div>
         <div className="grid grid-cols-10 gap-6 mb-7">
-          <div className="col-span-2"></div>
+          <div className="col-span-2">
+            <div className="mt-[-140px]">
+              <TopRated/>
+            </div>
+          </div>
           <div className="col-span-8">
             <ProductListingNewItems />
           </div>
         </div>
       </div>
       <FeaturesProduct />
+
     </>
   );
 }
