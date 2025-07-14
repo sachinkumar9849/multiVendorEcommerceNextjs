@@ -294,3 +294,11 @@ div#productLarge img {
   left: 0;
   bottom: 0;
 }
+p.categoryMobile {
+  color: white;
+  font-size: 24px;
+  transform: translateY(-5px);
+}
+.mobilePadding {
+  padding: 15px 0;
+}
