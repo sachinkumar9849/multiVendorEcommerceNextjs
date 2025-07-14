@@ -51,37 +51,41 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-10 gap-6 mb-7">
-          <div className="col-span-2">
-            {/* top rated product  */}
-            <div className="md:mt-[-111px]">
-              <LatestProduct />
-            </div>
+        <div className="md:block hidden">
+          <div className="grid grid-cols-10 gap-6 mb-7">
+            <div className="col-span-2">
+              {/* top rated product  */}
+              <div className="md:mt-[-111px]">
+                <LatestProduct />
+              </div>
 
-            {/* top reated product  */}
-          </div>
-          <div className="col-span-8">
-            <ProductListing />
-          </div>
-        </div>
-        <div className="grid grid-cols-10 gap-6 mb-7">
-          <div className="col-span-2">
-            <div className="mt-[-200px]">
-              <FreeDelivery />
+              {/* top reated product  */}
+            </div>
+            <div className="col-span-8">
+              <ProductListing />
             </div>
           </div>
-          <div className="col-span-8">
-            <ProductImageThree />
-          </div>
         </div>
-        <div className="grid grid-cols-10 gap-6 mb-7">
-          <div className="col-span-2">
-            <div className="mt-[-140px]">
-              <TopRated />
+        <div className="md:block hidden">
+          <div className="grid grid-cols-10 gap-6 mb-7">
+            <div className="col-span-2">
+              <div className="md:mt-[-200px]">
+                <FreeDelivery />
+              </div>
+            </div>
+            <div className="col-span-8">
+              <ProductImageThree />
             </div>
           </div>
-          <div className="col-span-8">
-            <ProductListingNewItems />
+          <div className="grid grid-cols-10 gap-6 mb-7">
+            <div className="col-span-2">
+              <div className="mt-[-140px]">
+                <TopRated />
+              </div>
+            </div>
+            <div className="col-span-8">
+              <ProductListingNewItems />
+            </div>
           </div>
         </div>
       </div>
