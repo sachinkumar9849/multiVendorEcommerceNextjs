@@ -302,3 +302,6 @@ p.categoryMobile {
 .mobilePadding {
   padding: 15px 0;
 }
+svg.lucide.lucide-star.w-4.h-4.fill-yellow-400.text-yellow-400 {
+  width: 11px;
+}

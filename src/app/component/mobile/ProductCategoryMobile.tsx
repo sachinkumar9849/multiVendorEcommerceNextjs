@@ -1,8 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { ChevronRight } from "lucide-react";
-import SectionTitle from "../comman/SectionTitle";
+import React from "react";
 import Link from "next/link";
 
 interface CategoryProps {

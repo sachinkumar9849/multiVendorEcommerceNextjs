@@ -3,7 +3,6 @@ import Image from "next/image";
 import CategoryMenuHome from "../component/Home/CategoryMenuHome";
 import HomePageBanner from "../component/Home/HomePageBanner";
 import ProductImage from "../component/Home/ProductImage";
-import ProductCategory from "../component/Home/ProductCategory";
 import ProductImageSingle from "../component/Home/ProductImageSingle";
 import ProductListing from "../component/product/ProductListing";
 import Link from "next/link";
@@ -13,8 +12,9 @@ import { FeaturesProduct } from "../component/product/FeaturesProduct";
 import LatestProduct from "../component/product/LatestProduct";
 import FreeDelivery from "../component/comman/FreeDelivery";
 import TopRated from "../component/product/TopRated";
-import ProductCategoryMobile from "../component/mobile/ProductCategoryMobile";
 import ProductCategoryWrapper from "../component/product/Wrapper/ProductCategoryWrapper";
+import TrendingMobile from "../component/mobile/TrendingMobile";
+import { LatestProductMobile } from "../component/mobile/LatestProductMobile";
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
             <ProductImage />
           </div>
         </div>
-        <div className="grid md:grid-cols-10 grid-cols-1 gap-6 mb-7">
+        <div className="grid md:grid-cols-10 grid-cols-1 gap-6 md:mb-7">
           <div className="col-span-2 md:block hidden">
             <ProductImageSingle />
           </div>
@@ -50,6 +50,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="md:hidden block">
+          <TrendingMobile />
+        </div>
+        <div className="md:hidden block">
+          <LatestProductMobile />
         </div>
         <div className="md:block hidden">
           <div className="grid grid-cols-10 gap-6 mb-7">
@@ -89,7 +96,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <FeaturesProduct />
+      <div className="md:block hidden">
+        <FeaturesProduct />
+      </div>
     </>
   );
 }
