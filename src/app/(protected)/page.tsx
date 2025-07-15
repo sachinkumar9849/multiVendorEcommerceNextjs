@@ -7,7 +7,6 @@ import ProductImageSingle from "../component/Home/ProductImageSingle";
 import ProductListing from "../component/product/ProductListing";
 import Link from "next/link";
 import ProductImageThree from "../component/Home/ProductImageThree";
-import ProductListingNewItems from "../component/product/ProductListingNewItems";
 import { FeaturesProduct } from "../component/product/FeaturesProduct";
 import LatestProduct from "../component/product/LatestProduct";
 import FreeDelivery from "../component/comman/FreeDelivery";
@@ -15,6 +14,8 @@ import TopRated from "../component/product/TopRated";
 import ProductCategoryWrapper from "../component/product/Wrapper/ProductCategoryWrapper";
 import TrendingMobile from "../component/mobile/TrendingMobile";
 import { LatestProductMobile } from "../component/mobile/LatestProductMobile";
+import NewItemsWrapper from "../component/product/Wrapper/NewItemsWrapper";
+import BestSellings from "../component/mobile/BestSellings";
 
 export default function Home() {
   return (
@@ -84,16 +85,19 @@ export default function Home() {
               <ProductImageThree />
             </div>
           </div>
-          <div className="grid grid-cols-10 gap-6 mb-7">
-            <div className="col-span-2">
-              <div className="mt-[-140px]">
-                <TopRated />
-              </div>
-            </div>
-            <div className="col-span-8">
-              <ProductListingNewItems />
+        </div>
+        <div className="grid md:grid-cols-10 grid-cols-1 gap-6">
+          <div className="col-span-2 md:block hidden">
+            <div className="mt-[-140px]">
+              <TopRated />
             </div>
           </div>
+          <div className="md:col-span-8 col-span-1">
+            <NewItemsWrapper />
+          </div>
+        </div>
+        <div className="md:hidden block">
+          <BestSellings />
         </div>
       </div>
       <div className="md:block hidden">

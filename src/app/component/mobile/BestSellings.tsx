@@ -1,5 +1,5 @@
 "use client";
-import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
+import { Star } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
 import Link from "next/link";
@@ -24,69 +24,22 @@ export interface Product {
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className="relative bg-white md:rounded-lg rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="flex relative bg-white md:rounded-lg rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
       <div className="relative overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-[100px] max-w-[100px] min-w-[100px] object-cover transition-transform duration-500 group-hover:scale-105"
         />
-
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-        {/* {product.badge && (
-          <div
-            className={`absolute top-2 left-2 px-2 py-1 text-xs font-semibold text-white rounded-full ${getBadgeColor(product.badge)}`}
-          >
-            {product.badge}
-          </div>
-        )} */}
-
-        <div
-          className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
-        >
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${
-              isLiked
-                ? "bg-red-500 text-white"
-                : "bg-white/90 text-gray-700 hover:bg-white"
-            }`}
-            title="Add to Wishlist"
-          >
-            <Heart size={14} className={isLiked ? "fill-current" : ""} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
-            title="Add to Cart"
-          >
-            <ShoppingCart size={14} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
-            title="Quick View"
-          >
-            <Eye size={14} />
-          </button>
-        </div>
       </div>
 
       <div className="md:p-3 p-2">
         <h3 className="text-sm font-medium text-gray-900 md:mb-2 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
-          {product.name.slice(0, 18)}
+          {product.name}
         </h3>
 
-        <div className="flex items-center gap-1 md:mb-2 mb-1">
+        <div className="flex items-center gap-1 md:mb-2 mb-0">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <Star
@@ -136,7 +89,7 @@ const products: Product[] = [
     name: "Smart Fitness Watch",
     price: 249.99,
     image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+      "https://img.drz.lazcdn.com/static/np/p/6d4621e44c35e45e8643d152216994a5.jpg_340x340q80.jpg_.webp",
     rating: 4.7,
 
     badge: "Featured",
@@ -148,7 +101,7 @@ const products: Product[] = [
     price: 89.99,
     originalPrice: 129.99,
     image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+      "https://img.drz.lazcdn.com/static/np/p/d9c1604baf7d958846c813fa81177b5b.jpg_340x340q80.jpg_.webp",
     rating: 4.6,
 
     badge: "Gaming",
@@ -161,7 +114,7 @@ const products: Product[] = [
     price: 189.99,
     originalPrice: 249.99,
     image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/20-270x270.jpg",
+      "https://img.drz.lazcdn.com/static/np/p/380b3bc4d07f22e47392b5a8a544ae58.jpg_340x340q80.jpg_.webp",
     rating: 4.6,
 
     badge: "New",
@@ -172,7 +125,7 @@ const products: Product[] = [
     name: "Organic Cotton T-Shirt",
     price: 34.99,
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+      "https://img.drz.lazcdn.com/static/np/p/bca6b57c602ea9a62384b81f64437469.jpg_340x340q80.jpg_.webp",
     rating: 4.4,
 
     badge: "Eco-Friendly",
@@ -185,7 +138,7 @@ const products: Product[] = [
     price: 79.99,
     originalPrice: 99.99,
     image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+      "https://img.drz.lazcdn.com/static/np/p/32bc1de446d7d0cf6dd4bf0aaf2c13aa.jpg_340x340q80.jpg_.webp",
     rating: 4.5,
 
     badge: "Eco-Friendly",
@@ -196,7 +149,7 @@ const products: Product[] = [
     name: "Modern Shower Caddy",
     price: 45.99,
     image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=400&fit=crop",
+      "https://img.drz.lazcdn.com/static/np/p/4d878554ed135d95c87ba39f3b5e5bb0.jpg_340x340q80.jpg_.webp",
     rating: 4.3,
 
     category: "Bathroom",
@@ -207,7 +160,7 @@ const products: Product[] = [
     price: 159.99,
     originalPrice: 199.99,
     image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+      "https://img.drz.lazcdn.com/static/np/p/eff475eb7289dd1b8c26c415fa1b6c12.jpg_340x340q80.jpg_.webp",
     rating: 4.7,
 
     badge: "New",
@@ -220,7 +173,7 @@ const products: Product[] = [
     price: 59.99,
     originalPrice: 79.99,
     image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "https://img.drz.lazcdn.com/static/np/p/4ee33e27604fce10738ed7b4bce40cdc.jpg_340x340q80.jpg_.webp",
     rating: 4.6,
 
     badge: "Best Seller",
@@ -240,7 +193,7 @@ const products: Product[] = [
   },
 ];
 
-const TrendingMobile = () => {
+const BestSellings = () => {
   const [activeTab] = useState("All");
 
   const filteredProducts =
@@ -249,16 +202,16 @@ const TrendingMobile = () => {
       : products.filter((product) => product.category === activeTab);
 
   return (
-    <div className="mobilePadding">
+    <div className="pb-5">
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
-          <MobileTitle title="Trending items" />
+          <MobileTitle title="Best sellings" />
           <Link className="text-[#222f3e] text-[12px]" href={""}>
             See All
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3">
           {filteredProducts.slice(0, 8).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -268,4 +221,4 @@ const TrendingMobile = () => {
   );
 };
 
-export default TrendingMobile;
+export default BestSellings;

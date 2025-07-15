@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import { Pagination, A11y, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -118,10 +118,10 @@ export const products: FeaturesProductProps[] = [
 
 export const LatestProductMobile = () => {
   return (
-    <div className="bg-gray-300 mobilePadding rounded-sm">
-      <div className="mx-auto max-w-7xl md:px-0 px-4">
+    <div className="newArrivals mobilePadding rounded-sm">
+      <div className="mx-auto max-w-7xl md:px-0 px-4 z-10 relative">
         <div className="flex items-center justify-between">
-          <MobileTitle title="Recommendations for you" />
+          <MobileTitle title="New Arrivals" />
           <Link className="text-[#222f3e] text-[12px]" href={""}>
             See All
           </Link>
@@ -129,17 +129,14 @@ export const LatestProductMobile = () => {
 
         <div className="w-full">
           <Swiper
-            modules={[Pagination, Scrollbar, A11y, Autoplay]}
+            modules={[Pagination, A11y, Autoplay]} // Removed Scrollbar module
             spaceBetween={16}
             slidesPerView={1.5} // Default for mobile
             pagination={{
               clickable: true,
               dynamicBullets: true,
             }}
-            scrollbar={{
-              draggable: true,
-              hide: true, // Hide scrollbar for cleaner mobile look
-            }}
+            // Removed scrollbar config completely
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,
@@ -150,7 +147,7 @@ export const LatestProductMobile = () => {
             speed={600}
             grabCursor={true}
             centeredSlides={false}
-            className="productSwiper shadow-lg"
+            className="productSwiper no-scrollbar"
             breakpoints={{
               // Mobile (default): 1.5 slides
               320: {
@@ -186,8 +183,44 @@ export const LatestProductMobile = () => {
             ))}
           </Swiper>
 
-          {/* Custom styles for mobile pagination */}
+          {/* Custom styles for mobile pagination and hide all scrollbars */}
           <style jsx global>{`
+            /* Hide all scrollbars globally */
+            .no-scrollbar::-webkit-scrollbar {
+              display: none !important;
+              width: 0 !important;
+              height: 0 !important;
+            }
+
+            .no-scrollbar {
+              -ms-overflow-style: none !important;
+              scrollbar-width: none !important;
+            }
+
+            /* Hide swiper scrollbars specifically */
+            .productSwiper .swiper-scrollbar {
+              display: none !important;
+            }
+
+            .productSwiper .swiper-scrollbar-drag {
+              display: none !important;
+            }
+
+            /* Hide any container scrollbars */
+            .productSwiper,
+            .productSwiper .swiper-container,
+            .productSwiper .swiper-wrapper {
+              -ms-overflow-style: none !important;
+              scrollbar-width: none !important;
+            }
+
+            .productSwiper::-webkit-scrollbar,
+            .productSwiper .swiper-container::-webkit-scrollbar,
+            .productSwiper .swiper-wrapper::-webkit-scrollbar {
+              display: none !important;
+            }
+
+            /* Pagination styles */
             .productSwiper .swiper-pagination {
               bottom: -44px !important;
             }
@@ -204,16 +237,13 @@ export const LatestProductMobile = () => {
 
             @media (max-width: 768px) {
               .productSwiper .swiper-pagination {
-                bottom: 12px !important;
+                bottom: 0px !important;
               }
 
               .productSwiper .swiper-pagination-bullet {
                 width: 8px !important;
                 height: 8px !important;
                 margin: 0 3px !important;
-              }
-              .productSwiper .swiper-pagination {
-                bottom: 0px !important;
               }
             }
           `}</style>
