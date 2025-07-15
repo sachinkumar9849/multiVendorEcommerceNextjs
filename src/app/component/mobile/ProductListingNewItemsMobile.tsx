@@ -2,7 +2,7 @@
 import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
-import Link from "next/link";
+import FlashSaleCountdown from "./FlashSaleCountdown";
 
 export interface Product {
   id: number;
@@ -29,7 +29,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div
-      className="relative bg-white md:rounded-lg rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
+      className="relative bg-white md:rounded-lg rounded-sm md:shadow-md shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -83,7 +83,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
       <div className="md:p-3 p-2">
         <h3 className="text-sm font-medium text-gray-900 md:mb-2 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
-          {product.name.slice(0, 18)}
+          {product.name.slice(0, 17)}
         </h3>
 
         <div className="flex items-center gap-1 md:mb-2 mb-1">
@@ -104,7 +104,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         </div>
 
         <div className="flex items-center gap-1">
-          <span className="md:text-lg text-md font-bold text-gray-900">
+          <span className="md:text-lg text-sm font-bold text-gray-900">
             Rs {product.price}
           </span>
           {product.originalPrice && (
@@ -125,7 +125,7 @@ const products: Product[] = [
     price: 299.99,
     originalPrice: 399.99,
     image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-600x600.jpg",
     rating: 4.8,
 
     badge: "Best Seller",
@@ -154,7 +154,7 @@ const products: Product[] = [
     badge: "Gaming",
     category: "Electronics",
   },
-
+  // Fashion
   {
     id: 4,
     name: "Premium Leather Backpack",
@@ -178,7 +178,6 @@ const products: Product[] = [
     badge: "Eco-Friendly",
     category: "Fashion",
   },
-
   {
     id: 6,
     name: "Luxury Bamboo Towel Set",
@@ -191,57 +190,19 @@ const products: Product[] = [
     badge: "Eco-Friendly",
     category: "Bathroom",
   },
-  {
-    id: 7,
-    name: "Modern Shower Caddy",
-    price: 45.99,
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=400&fit=crop",
-    rating: 4.3,
-
-    category: "Bathroom",
-  },
-  {
-    id: 8,
-    name: "LED Bathroom Mirror",
-    price: 159.99,
-    originalPrice: 199.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
-    rating: 4.7,
-
-    badge: "New",
-    category: "Bathroom",
-  },
-
-  {
-    id: 9,
-    name: "Memory Foam Pillow",
-    price: 59.99,
-    originalPrice: 79.99,
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
-    rating: 4.6,
-
-    badge: "Best Seller",
-    category: "Bedroom",
-  },
-  {
-    id: 10,
-    name: "Silk Bedsheet Set",
-    price: 199.99,
-    originalPrice: 299.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
-    rating: 4.8,
-
-    badge: "Featured",
-    category: "Bedroom",
-  },
 ];
 
-const TrendingMobile = () => {
-  const [activeTab] = useState("All");
+const ProductListingNewItemsMobile = () => {
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabs = [
+    "All",
+    "Bathroom",
+    "Bedroom",
+    "Decor",
+    "Furniture",
+    "Living Room",
+  ];
 
   const filteredProducts =
     activeTab === "All"
@@ -251,15 +212,43 @@ const TrendingMobile = () => {
   return (
     <div className="mobilePadding">
       <div className="w-full max-w-7xl mx-auto ">
-        <div className="flex items-center justify-between">
-          <MobileTitle title="Trending items" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
-            See All
-          </Link>
+        <div className="flex justify-between">
+          <MobileTitle title="Flash Sale" />
+          <FlashSaleCountdown />
+        </div>
+        <div className="flex items-center mb-4">
+          <div
+            className="overflow-x-auto scrollbar-hide"
+            style={{
+              scrollbarWidth: "none" /* Firefox */,
+              msOverflowStyle: "none" /* IE and Edge */,
+            }}
+          >
+            <style jsx>{`
+              .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+            <div className="flex whitespace-nowrap min-w-max">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`text-[#999] text-[12px] font-normal transition-all duration-200 border-b mx-1 px-5 py-[3px] flex-shrink-0 ${
+                    activeTab === tab
+                      ? "text-[#ffff] bg-[#ff3b1f] border-[#ff3b1f] border-1 rounded-full "
+                      : "text-black   border border-gray-300  rounded-full"
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
-          {filteredProducts.slice(0, 8).map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
@@ -268,4 +257,4 @@ const TrendingMobile = () => {
   );
 };
 
-export default TrendingMobile;
+export default ProductListingNewItemsMobile;

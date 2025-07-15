@@ -2,12 +2,12 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import { Pagination, A11y, Autoplay } from "swiper/modules"; // Removed Scrollbar module
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+// Removed scrollbar CSS import
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import type { SlideProps } from "@/app/Types/other";
@@ -34,17 +34,14 @@ const HomePageBanner = () => {
   return (
     <div className="w-full">
       <Swiper
-        modules={[Pagination, Scrollbar, A11y, Autoplay]}
+        modules={[Pagination, A11y, Autoplay]} // Removed Scrollbar module
         spaceBetween={16}
         slidesPerView={1.5} // Default for mobile
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        scrollbar={{
-          draggable: true,
-          hide: true, // Hide scrollbar for cleaner mobile look
-        }}
+        // Removed scrollbar configuration completely
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
@@ -92,7 +89,7 @@ const HomePageBanner = () => {
         ))}
       </Swiper>
 
-      {/* Custom styles for mobile pagination */}
+      {/* Custom styles for mobile pagination and hide all scrollbars */}
       <style jsx global>{`
         .mySwiper .swiper-pagination {
           bottom: -44px !important;
@@ -101,11 +98,44 @@ const HomePageBanner = () => {
         .mySwiper .swiper-pagination-bullet {
           background: #fd3c2d !important;
           opacity: 1 !important;
+          width: 3px !important;
+          height: 3px !important;
         }
 
         .mySwiper .swiper-pagination-bullet-active {
           background: #fd3c2d !important;
-          width: 10px;
+          width: 5px !important;
+          height: 5px !important;
+        }
+
+        /* Hide all scrollbars completely */
+        .mySwiper {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .mySwiper::-webkit-scrollbar {
+          display: none; /* Webkit browsers */
+        }
+
+        /* Hide Swiper's built-in scrollbar */
+        .mySwiper .swiper-scrollbar {
+          display: none !important;
+        }
+
+        /* Hide scrollbar on hover */
+        .mySwiper:hover .swiper-scrollbar {
+          display: none !important;
+        }
+
+        /* Ensure wrapper doesn't show scrollbars */
+        .mySwiper .swiper-wrapper {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        .mySwiper .swiper-wrapper::-webkit-scrollbar {
+          display: none;
         }
 
         @media (max-width: 768px) {
@@ -114,9 +144,15 @@ const HomePageBanner = () => {
           }
 
           .mySwiper .swiper-pagination-bullet {
-            width: 8px !important;
-            height: 8px !important;
-            margin: 0 3px !important;
+            width: 5px !important;
+            height: 5px !important;
+            border-radius: 10px;
+          }
+
+          .mySwiper .swiper-pagination-bullet-active {
+            width: 17px !important;
+            height: 5px !important;
+            border-radius: 10px;
           }
           .mySwiper .swiper-pagination {
             bottom: 0px !important;

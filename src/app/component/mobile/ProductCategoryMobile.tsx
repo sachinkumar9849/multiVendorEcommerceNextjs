@@ -78,16 +78,16 @@ const ProductCategoryMobile = () => {
   return (
     <div className="mobilePadding">
       <div className="max-w-7xl mx-auto md:px-0 px-4">
-        <div className="grid grid-cols-4  gap-2">
+        <div className="grid grid-cols-4  gap-4">
           {categories.slice(0, 7).map((category: CategoryProps) => (
             <div className="mx-auto text-center" key={category.id}>
-              <div className="aspect-square mx-auto  rounded-full overflow-hidden shadow-sm h-[50px]">
+              <div className="aspect-square mx-auto  rounded-full overflow-hidden shadow-sm h-[60px]">
                 <div className="w-full  h-full flex items-center justify-center ">
                   <Link href="/product">
                     <img
                       src={category.image}
                       alt={category.name}
-                      className="w-10 h-10 object-contain p-2"
+                      className="w-15 h-15 object-contain p-4"
                     />
                   </Link>
                 </div>
@@ -102,7 +102,7 @@ const ProductCategoryMobile = () => {
             </div>
           ))}
           <Link href={""}>
-            <div className="w-[50px] h-[50px] bg-[#ff3b1f] rounded-full flex items-center justify-center mx-auto text-center">
+            <div className="w-[60px] h-[60px] bg-[#ff3b1f] rounded-full flex items-center justify-center mx-auto text-center">
               <p className="categoryMobile">...</p>
             </div>
             <h3 className="text-[12px] mt-1 font-medium text-gray-900 text-center leading-tight">

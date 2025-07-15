@@ -86,13 +86,13 @@ export const ProductCard = ({
       </div>
 
       <CardContent className="md:px-6 px-2 py-0">
-        <div className="md:space-y-3 space-y-2">
-          <h3 className="font-semibold md:text-lg text-md text-card-foreground leading-tight line-clamp-2 p-0">
-            {name}
+        <div className="md:space-y-3 space-y-1">
+          <h3 className="font-semibold md:text-lg text-md text-card-foreground leading-tight  p-0">
+            {name.slice(0, 20)}
           </h3>
 
           <div className="md:flex justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ">
               <div className="flex items-center gap-0">
                 <span className="flex md:text-[13px] text-[10px] ">
                   {renderStars(rating)}
@@ -118,7 +118,7 @@ export const ProductCard = ({
       </CardContent>
 
       {/* Actions */}
-      <CardFooter className="md:p-6 p-2 pt-0">
+      <CardFooter className="md:p-6 p-2 mt-[-8px] pt-0">
         <div className="flex gap-2 w-full">
           <Button
             variant="outline"
