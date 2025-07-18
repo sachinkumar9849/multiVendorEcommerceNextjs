@@ -322,3 +322,16 @@ svg.lucide.lucide-star.w-4.h-4.fill-yellow-400.text-yellow-400 {
   position: relative;
   background-image: url(https://media.istockphoto.com/id/1266459481/vector/shopping-online-in-smartphone-application-digital-marketing-vector-illustration.jpg?s=612x612&w=0&k=20&c=yFTkURyuo4e0qxfCBgISPps6MwYLNAqShj_lxPs2IrQ=);
 }
+.MobileTitle p::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background: #302b2b;
+  width: 49px;
+  height: 2px;
+}
+
+.MobileTitle p {
+  position: relative;
+}

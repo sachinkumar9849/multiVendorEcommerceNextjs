@@ -249,7 +249,7 @@ const TrendingMobile = () => {
       : products.filter((product) => product.category === activeTab);
 
   return (
-    <div className="mobilePadding">
+    <div className="mobilePadding ">
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
           <MobileTitle title="Trending items" />
