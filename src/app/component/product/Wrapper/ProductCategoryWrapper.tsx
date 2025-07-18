@@ -7,7 +7,7 @@ import ProductCategoryMobile from "../../mobile/ProductCategoryMobile";
 const ProductCategoryWrapper = () => {
   const isMobile = useMobileDetection();
 
-  return <>{isMobile ? <ProductCategoryMobile /> : <ProductCategory />}</>;
+  return <>{isMobile ? "" : <ProductCategory />}</>;
 };
 
 export default ProductCategoryWrapper;

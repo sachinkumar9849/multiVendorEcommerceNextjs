@@ -16,6 +16,8 @@ import TrendingMobile from "../component/mobile/TrendingMobile";
 import { LatestProductMobile } from "../component/mobile/LatestProductMobile";
 import NewItemsWrapper from "../component/product/Wrapper/NewItemsWrapper";
 import BestSellings from "../component/mobile/BestSellings";
+import GroceryKitchen from "../component/mobile/MobileCategoryHome/GroceryKitchen";
+import HouseholdLifestyle from "../component/mobile/MobileCategoryHome/HouseholdLifestyle";
 
 export default function Home() {
   return (
@@ -54,7 +56,9 @@ export default function Home() {
         </div>
 
         <div className="md:hidden block">
-          <TrendingMobile />
+          <NewItemsWrapper />
+          <GroceryKitchen />
+          <HouseholdLifestyle />
         </div>
         <div className="md:hidden block">
           <LatestProductMobile />
@@ -93,7 +97,7 @@ export default function Home() {
             </div>
           </div>
           <div className="md:col-span-8 col-span-1">
-            <NewItemsWrapper />
+            <TrendingMobile />
           </div>
         </div>
         <div className="md:hidden block">

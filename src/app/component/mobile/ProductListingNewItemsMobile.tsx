@@ -211,7 +211,7 @@ const ProductListingNewItemsMobile = () => {
 
   return (
     <div className="mobilePadding">
-      <div className="w-full max-w-7xl mx-auto ">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="flex justify-between">
           <MobileTitle title="Flash Sale" />
           <FlashSaleCountdown />
