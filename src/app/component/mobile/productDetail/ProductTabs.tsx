@@ -187,7 +187,7 @@ export default function ProductTabs() {
             </div>
 
             <div className="space-y-2">
-              <h5 className="font-medium">What's Covered:</h5>
+              <h5 className="font-medium">What Covered:</h5>
               <ul className="space-y-1 text-muted-foreground">
                 <li>• Manufacturing defects</li>
                 <li>• Battery performance issues</li>

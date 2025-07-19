@@ -1,6 +1,4 @@
 "use client";
-
-import { ArrowLeft, Share2 } from "lucide-react";
 import ProductTabs from "./ProductTabs";
 import ProductActions from "./ProductActions";
 import ProductVariants from "./ProductVariants";
@@ -25,19 +23,6 @@ export default function ProductDetail() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-sm border-b border-card-border">
-        <div className="flex items-center justify-between p-4">
-          <button className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center transition-smooth hover:bg-muted">
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-
-          <h1 className="font-semibold">Product Details</h1>
-
-          <button className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center transition-smooth hover:bg-muted">
-            <Share2 className="w-5 h-5" />
-          </button>
-        </div>
-      </header>
 
       {/* Product Image Gallery */}
       <ProductImageGallery />
