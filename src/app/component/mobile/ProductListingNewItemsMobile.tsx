@@ -3,6 +3,7 @@ import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
 import FlashSaleCountdown from "./FlashSaleCountdown";
+import Link from "next/link";
 
 export interface Product {
   id: number;
@@ -64,20 +65,22 @@ const ProductCard = ({ product }: { product: Product }) => {
           >
             <Heart size={14} className={isLiked ? "fill-current" : ""} />
           </button>
-
-          <button
-            className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
-            title="Add to Cart"
-          >
-            <ShoppingCart size={14} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
-            title="Quick View"
-          >
-            <Eye size={14} />
-          </button>
+          <Link href="/mobile-cart">
+            <button
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
+              title="Add to Cart"
+            >
+              <ShoppingCart size={14} />
+            </button>
+          </Link>
+          <Link href="/ProductDetail">
+            <button
+              className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
+              title="Quick View"
+            >
+              <Eye size={14} />
+            </button>
+          </Link>
         </div>
       </div>
 
