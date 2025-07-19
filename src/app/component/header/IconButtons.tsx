@@ -86,7 +86,7 @@ const IconButtons = () => {
           </button>
         </Link>
         {/* Badge */}
-        <div className="absolute -top-2 -right-2 bg-white text-gray-800 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-gray-800">
+        <div className="absolute -top-2  -right-2 bg-white text-gray-800 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-gray-800">
           3
         </div>
       </div>
