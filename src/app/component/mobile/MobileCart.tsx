@@ -13,6 +13,7 @@ import {
   Heart,
   Share,
 } from "lucide-react";
+import Link from "next/link";
 
 interface CartItem {
   id: string;
@@ -263,7 +264,7 @@ const MobileCart = () => {
               <span className="font-medium">${tax.toFixed(2)}</span>
             </div>
             <Separator className="my-2" />
-            <div className="flex justify-between text-base font-semibold">
+            <div className="flex justify-between text-base font-semibold ">
               <span>Total</span>
               <span>${total.toFixed(2)}</span>
             </div>
@@ -272,17 +273,23 @@ const MobileCart = () => {
 
         {/* Action Buttons */}
         <div className="space-y-3">
-          <Button
-            className="w-full h-12 text-base font-medium bg-interactive hover:bg-interactive-hover text-interactive-foreground"
-            disabled={
-              cartItems.length === 0 || cartItems.some((item) => !item.inStock)
-            }
-          >
-            Proceed to Checkout
-          </Button>
-          <Button variant="outline" className="w-full h-12 text-base">
-            Continue Shopping
-          </Button>
+          <Link href="/checkout-mobile">
+            <Button
+              style={{ color: "white" }}
+              className="w-full h-12 text-base font-medium bg-[#222f3e] text-white  text-interactive-foreground"
+              disabled={
+                cartItems.length === 0 ||
+                cartItems.some((item) => !item.inStock)
+              }
+            >
+              Proceed to Checkout
+            </Button>
+          </Link>
+          <Link href="/mobile">
+            <Button variant="outline" className="w-full h-12 mt-2 text-base">
+              Continue Shopping
+            </Button>
+          </Link>
         </div>
 
         {/* Payment Icons */}

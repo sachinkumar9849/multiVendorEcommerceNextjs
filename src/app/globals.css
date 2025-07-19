@@ -343,3 +343,7 @@ svg.lucide.lucide-star.w-4.h-4.fill-yellow-400.text-yellow-400 {
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
 }
+/* .text-primary-foreground {
+    background: #ff3b1f;
+    color: white;
+} */

@@ -66,7 +66,7 @@ export default function ProductActions({
             </span>
           )}
           {discount > 0 && (
-            <span className="bg-accent text-accent-foreground text-sm font-semibold px-2 py-1 rounded-lg">
+            <span className="bg-[#ff3b1f] text-white text-sm font-semibold px-2 py-1 rounded-lg">
               -{discount}%
             </span>
           )}
@@ -86,7 +86,7 @@ export default function ProductActions({
             <button
               onClick={decrementQuantity}
               disabled={quantity <= 1}
-              className="p-3 hover:bg-muted transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-3  transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Minus className="w-4 h-4" />
             </button>
@@ -95,7 +95,7 @@ export default function ProductActions({
             </span>
             <button
               onClick={incrementQuantity}
-              className="p-3 hover:bg-muted transition-smooth"
+              className="p-3  transition-smooth"
             >
               <Plus className="w-4 h-4" />
             </button>
@@ -118,12 +118,12 @@ export default function ProductActions({
         </button>
 
         <div className="flex space-x-3">
-          <button className="flex-1 bg-secondary text-secondary-foreground font-semibold py-3 px-4 rounded-xl transition-smooth hover:bg-muted">
+          <button className="flex-1 bg-[#ff3b1f] text-white  font-semibold py-3 px-4 rounded-xl transition-smooth ">
             Buy Now
           </button>
           <button
             onClick={handleShare}
-            className="bg-secondary text-secondary-foreground p-3 rounded-xl transition-smooth hover:bg-muted"
+            className="bg-secondary text-[#ff3b1f] p-3 rounded-xl transition-smooth"
           >
             <Share2 className="w-5 h-5" />
           </button>
