@@ -335,3 +335,11 @@ svg.lucide.lucide-star.w-4.h-4.fill-yellow-400.text-yellow-400 {
 .MobileTitle p {
   position: relative;
 }
+
+.bg-accent {
+  background-color: hsl(338 88% 62%);
+}
+
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
