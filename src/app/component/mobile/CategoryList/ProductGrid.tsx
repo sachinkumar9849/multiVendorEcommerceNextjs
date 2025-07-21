@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductCard, Product } from "./ProductCard";
 
 interface ProductGridProps {
@@ -17,16 +18,17 @@ export const ProductGrid = ({ products, categoryName }: ProductGridProps) => {
 
       <div className="grid grid-cols-2 gap-4 auto-rows-max">
         {products.map((product, index) => (
-          <div
-            key={product.id}
-            className="animate-in fade-in-0 slide-in-from-bottom-4"
-            style={{
-              animationDelay: `${index * 100}ms`,
-              animationFillMode: "both",
-            }}
-          >
-            <ProductCard {...product} />
-          </div>
+          <Link href="/ProductDetail" key={product.id}>
+            <div
+              className="animate-in fade-in-0 slide-in-from-bottom-4"
+              style={{
+                animationDelay: `${index * 100}ms`,
+                animationFillMode: "both",
+              }}
+            >
+              <ProductCard {...product} />
+            </div>
+          </Link>
         ))}
       </div>
 

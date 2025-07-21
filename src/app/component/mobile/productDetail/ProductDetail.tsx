@@ -28,7 +28,7 @@ export default function ProductDetail() {
       <ProductImageGallery />
 
       {/* Product Information */}
-      <div className="p-6 space-y-6">
+      <div className="p-5 space-y-5">
         {/* Product Title & Rating */}
         <div className="space-y-3 animate-slide-up">
           <div>

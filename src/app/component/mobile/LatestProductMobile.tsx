@@ -177,7 +177,9 @@ export const LatestProductMobile = () => {
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <ProductCard {...product} />
+                  <Link href="/ProductDetail">
+                    <ProductCard {...product} />
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}

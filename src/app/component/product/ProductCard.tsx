@@ -2,6 +2,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Heart, ShoppingCart, Eye, Star } from "lucide-react";
+import Link from "next/link";
 
 interface ProductCardProps {
   id: string;
@@ -128,10 +129,12 @@ export const ProductCard = ({
             <Heart className="w-4 h-4 mr-2" />
             Save
           </Button>
-          <Button size="sm" className="flex-1 bg-[#ff3b1f] text-white">
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            Add to Cart
-          </Button>
+          <Link href="/mobile-cart">
+            <Button size="sm" className="flex-1 bg-[#ff3b1f] text-white">
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Add to Cart
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>

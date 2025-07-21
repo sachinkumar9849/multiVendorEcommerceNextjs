@@ -185,11 +185,11 @@ const MobileCart = () => {
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-foreground">
-                        ${item.price.toFixed(2)}
+                        {item.price.toFixed(2)}
                       </span>
                       {item.originalPrice && (
                         <span className="text-sm text-muted-foreground line-through">
-                          ${item.originalPrice.toFixed(2)}
+                          {item.originalPrice.toFixed(2)}
                         </span>
                       )}
                     </div>
@@ -298,13 +298,13 @@ const MobileCart = () => {
             Secure payment with
           </span>
           <div className="flex gap-1">
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               💳
             </div>
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               🅿️
             </div>
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               🍎
             </div>
           </div>

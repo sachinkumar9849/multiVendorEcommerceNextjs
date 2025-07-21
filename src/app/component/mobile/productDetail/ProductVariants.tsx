@@ -35,7 +35,7 @@ export default function ProductVariants({
                 key={color.id}
                 onClick={() => color.available && setSelectedColor(color.id)}
                 disabled={!color.available}
-                className={`flex-shrink-0 w-12 h-12 rounded-xl border-2 transition-smooth ${
+                className={`flex-shrink-0 w-10 h-10 rounded-md border-2 transition-smooth ${
                   selectedColor === color.id
                     ? "border-primary shadow-lg scale-110"
                     : "border-card-border"
@@ -66,13 +66,13 @@ export default function ProductVariants({
           <label className="text-sm font-medium text-foreground">
             Size: {sizeVariants.find((s) => s.id === selectedSize)?.name}
           </label>
-          <div className="grid grid-cols-4 gap-2">
+          <div className="flex">
             {sizeVariants.map((size) => (
               <button
                 key={size.id}
                 onClick={() => size.available && setSelectedSize(size.id)}
                 disabled={!size.available}
-                className={`py-3 px-4 rounded-xl border-2 font-medium transition-smooth ${
+                className={`py-1 px-4 mr-2  rounded-lg border-2 font-medium transition-smooth ${
                   selectedSize === size.id
                     ? "border-primary bg-primary text-primary-foreground shadow-glow"
                     : "border-card-border bg-card hover:border-primary/50"

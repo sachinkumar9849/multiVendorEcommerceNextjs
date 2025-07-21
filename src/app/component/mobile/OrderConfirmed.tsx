@@ -12,14 +12,14 @@ export default function OrderConfirmed() {
 
   const orderDetails = {
     orderNumber: "#ORD-2025-7845",
-    total: "$24.99",
+    total: "Rs 24.99",
     estimatedTime: "25-30 min",
     restaurant: "Smartwatch, Magnetic",
     address: "Kathmandu , Nepal",
     items: [
-      { name: "Smartwatch, Magnetic (10 pcs)", price: "$12.99", qty: 1 },
-      { name: "Smartwatch", price: "$8.50", qty: 1 },
-      { name: "Magnetic", price: "$3.50", qty: 1 },
+      { name: "Smartwatch, Magnetic (10 pcs)", price: "Rs 12.99", qty: 1 },
+      { name: "Smartwatch", price: "Rs 8.50", qty: 1 },
+      { name: "Magnetic", price: "Rs 3.50", qty: 1 },
     ],
   };
 
