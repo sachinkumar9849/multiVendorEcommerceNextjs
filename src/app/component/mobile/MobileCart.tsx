@@ -298,13 +298,13 @@ const MobileCart = () => {
             Secure payment with
           </span>
           <div className="flex gap-1">
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               💳
             </div>
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               🅿️
             </div>
-            <div className="w-8 h-5 bg-muted rounded text-xs flex items-center justify-center font-bold">
+            <div className="w-8 h-5  rounded text-xs flex items-center justify-center font-bold">
               🍎
             </div>
           </div>
