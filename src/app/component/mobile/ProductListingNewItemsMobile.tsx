@@ -1,5 +1,5 @@
 "use client";
-import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
+import { Star } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
 import FlashSaleCountdown from "./FlashSaleCountdown";
@@ -25,99 +25,60 @@ export interface Product {
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   return (
-    <div
-      className="relative bg-white md:rounded-lg rounded-sm md:shadow-md shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="relative overflow-hidden">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+    <Link href="/ProductDetail">
+      <div
+        className="relative bg-white md:rounded-lg rounded-sm md:shadow-md shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="relative overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
 
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-        {/* {product.badge && (
-          <div
-            className={`absolute top-2 left-2 px-2 py-1 text-xs font-semibold text-white rounded-full ${getBadgeColor(product.badge)}`}
-          >
-            {product.badge}
-          </div>
-        )} */}
-
-        <div
-          className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
-        >
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${
-              isLiked
-                ? "bg-red-500 text-white"
-                : "bg-white/90 text-gray-700 hover:bg-white"
-            }`}
-            title="Add to Wishlist"
-          >
-            <Heart size={14} className={isLiked ? "fill-current" : ""} />
-          </button>
-          <Link href="/mobile-cart">
-            <button
-              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
-              title="Add to Cart"
-            >
-              <ShoppingCart size={14} />
-            </button>
-          </Link>
-          <Link href="/ProductDetail">
-            <button
-              className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
-              title="Quick View"
-            >
-              <Eye size={14} />
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <div className="md:p-3 p-2">
-        <h3 className="text-sm font-medium text-gray-900 md:mb-2 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
-          {product.name.slice(0, 17)}
-        </h3>
-
-        <div className="flex items-center gap-1 md:mb-2 mb-1">
-          <div className="flex items-center">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={10}
-                className={`${
-                  i < Math.floor(product.rating)
-                    ? "text-yellow-400 fill-current"
-                    : "text-gray-300"
-                }`}
-              />
-            ))}
-          </div>
-          <span className="text-xs text-gray-600">{product.rating}</span>
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
-        <div className="flex items-center gap-1">
-          <span className="md:text-lg text-sm font-bold text-gray-900">
-            Rs {product.price}
-          </span>
-          {product.originalPrice && (
-            <span className="md:text-sm text-[10px] text-gray-500 line-through">
-              Rs {product.originalPrice}
+        <div className="md:p-3 p-2">
+          <h3 className="text-sm font-medium text-gray-900 md:mb-2 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+            {product.name.slice(0, 17)}
+          </h3>
+
+          <div className="flex items-center gap-1 md:mb-2 mb-1">
+            <div className="flex items-center">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={10}
+                  className={`${
+                    i < Math.floor(product.rating)
+                      ? "text-yellow-400 fill-current"
+                      : "text-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-xs text-gray-600">{product.rating}</span>
+          </div>
+
+          <div className="flex items-center gap-1">
+            <span className="md:text-lg text-sm font-bold text-gray-900">
+              Rs {product.price}
             </span>
-          )}
+            {product.originalPrice && (
+              <span className="md:text-sm text-[10px] text-gray-500 line-through">
+                Rs {product.originalPrice}
+              </span>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -260,7 +260,9 @@ const TrendingMobile = () => {
 
         <div className="grid grid-cols-2 gap-3">
           {filteredProducts.slice(0, 8).map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <Link href="/ProductDetail" key={product.id}>
+              <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
       </div>
