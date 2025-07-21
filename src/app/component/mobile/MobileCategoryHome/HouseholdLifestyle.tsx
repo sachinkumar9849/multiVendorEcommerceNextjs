@@ -6,7 +6,12 @@ const HouseholdLifestyle = () => {
   return (
     <>
       <div className="mobilePadding">
-        <MobileTitle title="Household & Lifestyle" />
+        <div className="flex justify-between items-center">
+          <MobileTitle title="Household & Lifestyle" />
+          <Link className="text-[#222f3e] text-[12px]" href="/category-list">
+            See All
+          </Link>
+        </div>
         <div className="grid grid-cols-4  gap-x-3 gap-y-4">
           <div className="col-span-1">
             <Link href="/category">

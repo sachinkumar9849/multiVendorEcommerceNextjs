@@ -58,7 +58,7 @@ export default function ProductActions({
       <div className="space-y-2">
         <div className="flex items-baseline space-x-3">
           <span className="text-3xl font-bold text-foreground">
-            ${price.toFixed(2)}
+            Rs.{price.toFixed(2)}
           </span>
           {originalPrice && (
             <span className="text-lg text-muted-foreground line-through">
