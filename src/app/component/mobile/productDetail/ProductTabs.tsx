@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Package, MessageCircle, Shield, Truck } from "lucide-react";
+import { Package, MessageCircle } from "lucide-react";
 import ProductRating from "./ProductRating";
 
 interface Review {
@@ -46,8 +46,6 @@ const mockReviews: Review[] = [
 const tabs = [
   { id: "description", label: "Details", icon: Package },
   { id: "reviews", label: "Reviews", icon: MessageCircle },
-  { id: "shipping", label: "Shipping", icon: Truck },
-  { id: "warranty", label: "Warranty", icon: Shield },
 ];
 
 export default function ProductTabs() {
@@ -138,70 +136,6 @@ export default function ProductTabs() {
             </div>
 
             <button className="btn-accent w-full">View All Reviews</button>
-          </div>
-        );
-
-      case "shipping":
-        return (
-          <div className="space-y-4 text-sm">
-            <div className="bg-secondary rounded-2xl p-4 space-y-3">
-              <h4 className="font-semibold">Shipping Options</h4>
-
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Standard Shipping</span>
-                  <span className="font-medium">Free (5-7 days)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Express Shipping</span>
-                  <span className="font-medium">$9.99 (2-3 days)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Next Day Delivery</span>
-                  <span className="font-medium">$19.99 (1 day)</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <p className="text-muted-foreground">
-                Orders placed before 2 PM EST ship the same day. Free shipping
-                on orders over $50.
-              </p>
-              <p className="text-muted-foreground">
-                International shipping available to 50+ countries.
-              </p>
-            </div>
-          </div>
-        );
-
-      case "warranty":
-        return (
-          <div className="space-y-4 text-sm">
-            <div className="bg-secondary rounded-2xl p-4 space-y-3">
-              <h4 className="font-semibold">2-Year Limited Warranty</h4>
-              <p className="text-muted-foreground">
-                Your headphones are covered against manufacturing defects for 2
-                full years from the date of purchase.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h5 className="font-medium">What Covered:</h5>
-              <ul className="space-y-1 text-muted-foreground">
-                <li>• Manufacturing defects</li>
-                <li>• Battery performance issues</li>
-                <li>• Audio driver failures</li>
-                <li>• Bluetooth connectivity problems</li>
-              </ul>
-            </div>
-
-            <div className="space-y-2">
-              <h5 className="font-medium">30-Day Money Back Guarantee</h5>
-              <p className="text-muted-foreground">
-                Not satisfied? Return within 30 days for a full refund.
-              </p>
-            </div>
           </div>
         );
 

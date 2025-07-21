@@ -79,14 +79,14 @@ const HomePageBanner = () => {
       >
         {slides.map((slide: SlideProps) => (
           <SwiperSlide key={slide.id}>
-              <Link href="/ProductDetail" key={slide.id}>
-            <div className="md:mt-0 mt-3 relative h-[150px] sm:h-[250px] md:h-[300px] lg:h-[343px] md:rounded-none rounded-sm  overflow-hidden">
-              <img
-                src={slide.image}
-                alt={`Banner ${slide.id}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <Link href="/ProductDetail" key={slide.id}>
+              <div className="md:mt-0 mt-3 relative h-[150px] sm:h-[250px] md:h-[300px] lg:h-[343px] md:rounded-none rounded-sm  overflow-hidden">
+                <img
+                  src={slide.image}
+                  alt={`Banner ${slide.id}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </Link>
           </SwiperSlide>
         ))}

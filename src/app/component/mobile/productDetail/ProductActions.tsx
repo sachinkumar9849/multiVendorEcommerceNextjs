@@ -62,7 +62,7 @@ export default function ProductActions({
           </span>
           {originalPrice && (
             <span className="text-lg text-muted-foreground line-through">
-              ${originalPrice.toFixed(2)}
+              Rs {originalPrice.toFixed(2)}
             </span>
           )}
           {discount > 0 && (
@@ -101,7 +101,7 @@ export default function ProductActions({
             </button>
           </div>
           <span className="text-sm text-muted-foreground">
-            Total: ${(price * quantity).toFixed(2)}
+            Total: Rs {(price * quantity).toFixed(2)}
           </span>
         </div>
       </div>
@@ -111,19 +111,19 @@ export default function ProductActions({
         <button
           onClick={handleAddToCart}
           disabled={!inStock}
-          className="btn-primary w-full flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className=" btn-primary w-full flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <ShoppingBag className="w-5 h-5" />
           <span>Add to Cart</span>
         </button>
 
         <div className="flex space-x-3">
-          <button className="flex-1 bg-[#ff3b1f] text-white  font-semibold py-3 px-4 rounded-xl transition-smooth ">
+          <button className="flex-1 bg-[#ff3b1f] text-white  font-semibold py-2 px-4 rounded-lg transition-smooth ">
             Buy Now
           </button>
           <button
             onClick={handleShare}
-            className="bg-secondary text-[#ff3b1f] p-3 rounded-xl transition-smooth"
+            className="bg-secondary text-[#ff3b1f] p-3 rounded-lg transition-smooth"
           >
             <Share2 className="w-5 h-5" />
           </button>

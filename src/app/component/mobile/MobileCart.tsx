@@ -185,11 +185,11 @@ const MobileCart = () => {
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-foreground">
-                        ${item.price.toFixed(2)}
+                        {item.price.toFixed(2)}
                       </span>
                       {item.originalPrice && (
                         <span className="text-sm text-muted-foreground line-through">
-                          ${item.originalPrice.toFixed(2)}
+                          {item.originalPrice.toFixed(2)}
                         </span>
                       )}
                     </div>
