@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import type { SlideProps } from "@/app/Types/other";
+import Link from "next/link";
 
 const HomePageBanner = () => {
   const slides: SlideProps[] = [
@@ -78,6 +79,7 @@ const HomePageBanner = () => {
       >
         {slides.map((slide: SlideProps) => (
           <SwiperSlide key={slide.id}>
+              <Link href="/ProductDetail" key={slide.id}>
             <div className="md:mt-0 mt-3 relative h-[150px] sm:h-[250px] md:h-[300px] lg:h-[343px] md:rounded-none rounded-sm  overflow-hidden">
               <img
                 src={slide.image}
@@ -85,6 +87,7 @@ const HomePageBanner = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
