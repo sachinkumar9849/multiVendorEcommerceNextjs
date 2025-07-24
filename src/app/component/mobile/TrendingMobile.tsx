@@ -49,36 +49,6 @@ const ProductCard = ({ product }: { product: Product }) => {
             {product.badge}
           </div>
         )} */}
-
-        <div
-          className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
-        >
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${
-              isLiked
-                ? "bg-red-500 text-white"
-                : "bg-white/90 text-gray-700 hover:bg-white"
-            }`}
-            title="Add to Wishlist"
-          >
-            <Heart size={14} className={isLiked ? "fill-current" : ""} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
-            title="Add to Cart"
-          >
-            <ShoppingCart size={14} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
-            title="Quick View"
-          >
-            <Eye size={14} />
-          </button>
-        </div>
       </div>
 
       <div className="md:p-3 p-2">
@@ -243,7 +213,7 @@ const TrendingMobile = () => {
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
           <MobileTitle title="Trending items" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
+          <Link className="text-[#222f3e] text-[12px]" href="/product-list">
             See All
           </Link>
         </div>

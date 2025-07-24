@@ -37,7 +37,7 @@ export default function ProductVariants({
                 disabled={!color.available}
                 className={`flex-shrink-0 w-10 h-10 rounded-md border-2 transition-smooth ${
                   selectedColor === color.id
-                    ? "border-primary shadow-lg scale-110"
+                    ? "border-[#ff3b1f] bg-[#ff3b1f] text-white shadow-glow"
                     : "border-card-border"
                 } ${
                   !color.available
@@ -74,7 +74,7 @@ export default function ProductVariants({
                 disabled={!size.available}
                 className={`py-1 px-4 mr-2  rounded-lg border-2 font-medium transition-smooth ${
                   selectedSize === size.id
-                    ? "border-primary bg-primary text-primary-foreground shadow-glow"
+                    ? "border-[#ff3b1f] bg-[#ff3b1f] text-white shadow-glow"
                     : "border-card-border bg-card hover:border-primary/50"
                 } ${
                   !size.available

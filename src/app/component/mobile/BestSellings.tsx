@@ -205,7 +205,7 @@ const BestSellings = () => {
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
           <MobileTitle title="Best sellings" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
+          <Link className="text-[#222f3e] text-[12px]" href="/product-list">
             See All
           </Link>
         </div>

@@ -6,7 +6,7 @@ const GroceryList = () => {
     <>
       <div className="grid grid-cols-4  gap-x-3 gap-y-4 mt-5">
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -22,7 +22,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -38,7 +38,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -54,7 +54,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -70,7 +70,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -86,7 +86,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -102,7 +102,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -118,7 +118,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -134,7 +134,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -150,7 +150,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -166,7 +166,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -182,7 +182,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -198,7 +198,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -214,7 +214,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -230,7 +230,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -246,7 +246,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -262,7 +262,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -278,7 +278,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -294,7 +294,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img
@@ -310,7 +310,7 @@ const GroceryList = () => {
           </Link>
         </div>
         <div className="col-span-1">
-          <Link href="/category">
+          <Link href="/product-list">
             <div className="text-center">
               <div className="bg-[#eef7ff] rounded-xl">
                 <img

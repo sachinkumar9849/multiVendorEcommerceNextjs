@@ -84,7 +84,7 @@ export const LatestProductMobile = () => {
       <div className="mx-auto max-w-7xl md:px-0 px-4 z-10 relative">
         <div className="flex items-center justify-between">
           <MobileTitle title="New Arrivals" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
+          <Link className="text-[#222f3e] text-[12px]" href="/product-list">
             See All
           </Link>
         </div>
