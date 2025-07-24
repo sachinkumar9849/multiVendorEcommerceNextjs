@@ -13,6 +13,7 @@ import {
   User,
   ShoppingBag,
 } from "lucide-react";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -510,7 +511,8 @@ export default function ProductList() {
       <div className="p-4 pb-20">
         <div className="grid grid-cols-2 gap-3">
           {filteredProducts.map((product) => (
-            <div
+            <Link
+              href="/ProductDetail"
               key={product.id}
               className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden"
             >
@@ -587,7 +589,7 @@ export default function ProductList() {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
