@@ -111,11 +111,11 @@ export const ProductCard = ({ title, image, item }: ProductCardProps) => {
         <span className="text-xs text-gray-600">4.7</span>
       </div>
 
-      <div className="flex items-center gap-1">
-        <span className="md:text-lg text-sm font-bold text-gray-900">
+      <div className="flex gap-1 items-center justify-center">
+        <span className="md:text-lg text-[11px] font-bold text-gray-900">
           Rs 79.99
         </span>
-        <span className="md:text-sm text-[10px] text-gray-500 line-through">
+        <span className="md:text-sm text-[9px] text-gray-500 line-through">
           Rs 99.99
         </span>
       </div>
