@@ -1,5 +1,5 @@
 "use client";
-import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
+import { Star } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
 import Link from "next/link";
@@ -24,8 +24,7 @@ export interface Product {
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   return (
     <div

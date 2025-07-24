@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, A11y, Autoplay } from "swiper/modules";
+import { A11y, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -91,7 +91,7 @@ export const LatestProductMobile = () => {
 
         <div className="w-full">
           <Swiper
-            modules={[Pagination, A11y, Autoplay]} // Removed Scrollbar module
+            modules={[A11y, Autoplay]} // Removed Scrollbar module
             spaceBetween={16}
             slidesPerView={1.5} // Default for mobile
             pagination={{
