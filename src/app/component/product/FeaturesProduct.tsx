@@ -19,8 +19,7 @@ export const products: FeaturesProductProps[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.8,
 
     badge: "Best Seller",
@@ -30,8 +29,7 @@ export const products: FeaturesProductProps[] = [
     id: "2",
     name: "Smart Fitness Watch",
     price: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.7,
 
     badge: "Featured",
@@ -43,8 +41,7 @@ export const products: FeaturesProductProps[] = [
     name: "Wireless Gaming Mouse",
     price: 89.99,
     originalPrice: 129.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
     rating: 4.6,
 
     badge: "Gaming",
@@ -56,8 +53,7 @@ export const products: FeaturesProductProps[] = [
     name: "Premium Leather Backpack",
     price: 189.99,
     originalPrice: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/20-270x270.jpg",
+    image: "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
     rating: 4.6,
 
     badge: "New",

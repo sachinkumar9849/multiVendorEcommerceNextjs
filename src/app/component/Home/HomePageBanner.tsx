@@ -18,17 +18,17 @@ const HomePageBanner = () => {
     {
       id: 1,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/slideshow/home1/slider-3-950x450.jpg",
+        "https://static.vecteezy.com/system/resources/thumbnails/004/299/835/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg",
     },
     {
       id: 2,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/slideshow/home1/slider-2-950x450.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2021/11/JU/IF/CF/11337912/e-commerce-product-image-editing-services.jpg",
     },
     {
       id: 3,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/slideshow/home1/slider-1-950x450.jpg",
+        "https://graphicdesigneye.com/images/studio-shot-product-images.jpg",
     },
   ];
 

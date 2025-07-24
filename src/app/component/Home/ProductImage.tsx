@@ -9,8 +9,8 @@ const ProductImage = () => {
             <img
               data-sizes="auto"
               className="lazyautosizes lazyloaded h-[153px]"
-              src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner1.jpg"
-              data-src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner1.jpg"
+              src="https://static.vecteezy.com/system/resources/thumbnails/004/299/835/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg"
+              data-src="https://static.vecteezy.com/system/resources/thumbnails/004/299/835/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg"
               alt="banner"
               sizes="293px"
             />
@@ -21,8 +21,8 @@ const ProductImage = () => {
             <img
               data-sizes="auto"
               className="lazyautosizes lazyloaded h-[153px]"
-              src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner2.jpg"
-              data-src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner2.jpg"
+              src="https://i.pinimg.com/736x/74/21/8d/74218d175aa08fad769d910bdf5be230.jpg"
+              data-src="https://i.pinimg.com/736x/74/21/8d/74218d175aa08fad769d910bdf5be230.jpg"
               alt="banner"
               sizes="293px"
             />

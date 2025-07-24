@@ -142,8 +142,7 @@ const products: Product[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-600x600.jpg",
+    image: "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
     rating: 4.8,
 
     badge: "Best Seller",
@@ -153,8 +152,7 @@ const products: Product[] = [
     id: 2,
     name: "Smart Fitness Watch",
     price: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.7,
 
     badge: "Featured",
@@ -165,8 +163,7 @@ const products: Product[] = [
     name: "Wireless Gaming Mouse",
     price: 89.99,
     originalPrice: 129.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
     rating: 4.6,
 
     badge: "Gaming",
@@ -178,8 +175,7 @@ const products: Product[] = [
     name: "Premium Leather Backpack",
     price: 189.99,
     originalPrice: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/20-270x270.jpg",
+    image: "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
     rating: 4.6,
 
     badge: "New",
@@ -189,8 +185,7 @@ const products: Product[] = [
     id: 5,
     name: "Organic Cotton T-Shirt",
     price: 34.99,
-    image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg",
     rating: 4.4,
 
     badge: "Eco-Friendly",
@@ -201,8 +196,7 @@ const products: Product[] = [
     name: "Luxury Bamboo Towel Set",
     price: 79.99,
     originalPrice: 99.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg",
     rating: 4.5,
 
     badge: "Eco-Friendly",
@@ -212,8 +206,7 @@ const products: Product[] = [
     id: 8,
     name: "Smart Fitness Watch",
     price: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+    image: "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg",
     rating: 4.7,
 
     badge: "Featured",

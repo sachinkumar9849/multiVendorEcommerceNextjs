@@ -15,8 +15,7 @@ export const wishlistProducts: Product[] = [
     name: "Premium Smartphone Pro Max",
     price: 899.99,
     originalPrice: 1099.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.8,
     category: "Electronics",
     inStock: true,
@@ -26,8 +25,7 @@ export const wishlistProducts: Product[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.7,
     category: "Audio",
     inStock: true,
@@ -36,8 +34,7 @@ export const wishlistProducts: Product[] = [
     id: "3",
     name: "MacBook Pro 16-inch",
     price: 2399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
     rating: 4.9,
     category: "Computers",
     inStock: false,
@@ -47,8 +44,7 @@ export const wishlistProducts: Product[] = [
     name: "Smart Watch Series 9",
     price: 429.99,
     originalPrice: 499.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/20-270x270.jpg",
+    image: "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
     rating: 4.6,
     category: "Wearables",
     inStock: true,
