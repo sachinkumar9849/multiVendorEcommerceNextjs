@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Heart, ShoppingCart, Eye, Star } from "lucide-react";
+import { Heart, ShoppingCart, Star } from "lucide-react";
 import Link from "next/link";
 
 interface ProductCardProps {
@@ -62,28 +62,6 @@ export const ProductCard = ({
         </div>
 
         {/* Hover Actions */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="flex gap-2">
-            <Button
-              size="icon"
-              className="h-10 w-10 bg-white text-black hover:text-white transition-all"
-            >
-              <Heart className="w-4 h-4" />
-            </Button>
-            <Button
-              size="icon"
-              className="h-10 w-10 bg-white text-black hover:text-white transition-all"
-            >
-              <Eye className="w-4 h-4" />
-            </Button>
-            <Button
-              size="icon"
-              className="h-10 w-10 bg-white text-black hover:text-white transition-all"
-            >
-              <ShoppingCart className="w-4 h-4 " />
-            </Button>
-          </div>
-        </div>
       </div>
 
       <CardContent className="md:px-6 px-2 py-0">

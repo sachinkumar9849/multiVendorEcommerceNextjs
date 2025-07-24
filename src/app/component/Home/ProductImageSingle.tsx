@@ -9,8 +9,8 @@ const ProductImageSingle = () => {
             <img
               data-sizes="auto"
               className="lazyautosizes lazyloaded w-full"
-              src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner4.jpg"
-              data-src="https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/catalog/banners/banner4.jpg"
+              src="https://png.pngtree.com/template/20220421/ourmid/pngtree-ecommerce-banner-planning-segmentation-selection-image_1316202.jpg"
+              data-src="https://png.pngtree.com/template/20220421/ourmid/pngtree-ecommerce-banner-planning-segmentation-selection-image_1316202.jpg"
               alt="banner"
               sizes="293px"
             />

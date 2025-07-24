@@ -17,7 +17,7 @@ const TopRated = () => {
     {
       id: 1,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/9-80x80.jpg",
+        "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -25,7 +25,7 @@ const TopRated = () => {
     {
       id: 2,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -33,7 +33,7 @@ const TopRated = () => {
     {
       id: 3,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -41,7 +41,7 @@ const TopRated = () => {
     {
       id: 4,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-80x80.jpg",
+        "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -49,7 +49,7 @@ const TopRated = () => {
     {
       id: 5,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/9-80x80.jpg",
+        "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -57,7 +57,7 @@ const TopRated = () => {
     {
       id: 6,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -65,7 +65,7 @@ const TopRated = () => {
     {
       id: 7,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -73,7 +73,7 @@ const TopRated = () => {
     {
       id: 8,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-80x80.jpg",
+        "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -81,7 +81,7 @@ const TopRated = () => {
     {
       id: 9,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/9-80x80.jpg",
+        "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -89,7 +89,7 @@ const TopRated = () => {
     {
       id: 10,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -97,7 +97,7 @@ const TopRated = () => {
     {
       id: 11,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -105,7 +105,7 @@ const TopRated = () => {
     {
       id: 12,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-80x80.jpg",
+        "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -113,7 +113,7 @@ const TopRated = () => {
     {
       id: 13,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/9-80x80.jpg",
+        "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -121,7 +121,7 @@ const TopRated = () => {
     {
       id: 14,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -129,7 +129,7 @@ const TopRated = () => {
     {
       id: 15,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",
@@ -137,7 +137,7 @@ const TopRated = () => {
     {
       id: 16,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-80x80.jpg",
+        "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
       title: "Balltip nullaelit",
       price: "Rs 65.00",
       author: "By Peter Thomas",

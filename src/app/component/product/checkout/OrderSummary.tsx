@@ -7,24 +7,21 @@ const cartItems = [
     name: "Premium Wireless Headphones",
     price: 299.99,
     quantity: 1,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
   },
   {
     id: 2,
     name: "Smart Watch Pro",
     price: 449.99,
     quantity: 1,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
   },
   {
     id: 3,
     name: "Latest Smartphone",
     price: 899.99,
     quantity: 1,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
   },
 ];
 

@@ -77,8 +77,7 @@ const products: Product[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.8,
 
     badge: "Best Seller",
@@ -206,7 +205,7 @@ const BestSellings = () => {
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
           <MobileTitle title="Best sellings" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
+          <Link className="text-[#222f3e] text-[12px]" href="/product-list">
             See All
           </Link>
         </div>

@@ -10,7 +10,7 @@ const getCartItems = async () => {
       price: 29.99,
       originalPrice: 39.99,
       image:
-        "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/4-80x80.jpg",
+        "https://i.pinimg.com/736x/74/21/8d/74218d175aa08fad769d910bdf5be230.jpg",
       color: "Black",
       size: "M",
       quantity: 2,

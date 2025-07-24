@@ -4,6 +4,7 @@ import ProductActions from "./ProductActions";
 import ProductVariants from "./ProductVariants";
 import ProductRating from "./ProductRating";
 import ProductImageGallery from "./ProductImageGallery";
+import SimilarProductsCarousel from "../similarProduct/SimilarProductsCarousel";
 
 const colorVariants = [
   { id: "black", name: "Midnight Black", value: "#1a1a1a", available: true },
@@ -96,6 +97,7 @@ export default function ProductDetail() {
 
       {/* Bottom Safe Area */}
       <div className="h-6"></div>
+      <SimilarProductsCarousel />
     </div>
   );
 }

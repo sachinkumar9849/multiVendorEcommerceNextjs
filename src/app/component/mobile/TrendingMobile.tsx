@@ -1,5 +1,5 @@
 "use client";
-import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
+import { Star } from "lucide-react";
 import { useState } from "react";
 import MobileTitle from "../comman/MobileTitle";
 import Link from "next/link";
@@ -24,8 +24,7 @@ export interface Product {
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   return (
     <div
@@ -49,36 +48,6 @@ const ProductCard = ({ product }: { product: Product }) => {
             {product.badge}
           </div>
         )} */}
-
-        <div
-          className={`absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
-        >
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${
-              isLiked
-                ? "bg-red-500 text-white"
-                : "bg-white/90 text-gray-700 hover:bg-white"
-            }`}
-            title="Add to Wishlist"
-          >
-            <Heart size={14} className={isLiked ? "fill-current" : ""} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
-            title="Add to Cart"
-          >
-            <ShoppingCart size={14} />
-          </button>
-
-          <button
-            className="p-2 rounded-full bg-white/90 text-gray-700 hover:bg-white transition-all duration-200"
-            title="Quick View"
-          >
-            <Eye size={14} />
-          </button>
-        </div>
       </div>
 
       <div className="md:p-3 p-2">
@@ -124,8 +93,7 @@ const products: Product[] = [
     name: "Wireless Noise-Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/8-270x270.jpg",
+    image: "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
     rating: 4.8,
 
     badge: "Best Seller",
@@ -135,8 +103,7 @@ const products: Product[] = [
     id: 2,
     name: "Smart Fitness Watch",
     price: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/13-270x270.jpg",
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg",
     rating: 4.7,
 
     badge: "Featured",
@@ -147,8 +114,7 @@ const products: Product[] = [
     name: "Wireless Gaming Mouse",
     price: 89.99,
     originalPrice: 129.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/3-270x270.jpg",
+    image: "https://images.pexels.com/photos/2752045/pexels-photo-2752045.jpeg",
     rating: 4.6,
 
     badge: "Gaming",
@@ -160,8 +126,7 @@ const products: Product[] = [
     name: "Premium Leather Backpack",
     price: 189.99,
     originalPrice: 249.99,
-    image:
-      "https://opencart.smartaddons.com/themes/so_emarket/webkul_marketplace/image/cache/catalog/demo/product/funiture/20-270x270.jpg",
+    image: "https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg",
     rating: 4.6,
 
     badge: "New",
@@ -171,8 +136,7 @@ const products: Product[] = [
     id: 5,
     name: "Organic Cotton T-Shirt",
     price: 34.99,
-    image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
     rating: 4.4,
 
     badge: "Eco-Friendly",
@@ -184,8 +148,7 @@ const products: Product[] = [
     name: "Luxury Bamboo Towel Set",
     price: 79.99,
     originalPrice: 99.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg",
     rating: 4.5,
 
     badge: "Eco-Friendly",
@@ -195,8 +158,7 @@ const products: Product[] = [
     id: 7,
     name: "Modern Shower Caddy",
     price: 45.99,
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg",
     rating: 4.3,
 
     category: "Bathroom",
@@ -206,8 +168,7 @@ const products: Product[] = [
     name: "LED Bathroom Mirror",
     price: 159.99,
     originalPrice: 199.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg",
     rating: 4.7,
 
     badge: "New",
@@ -219,8 +180,7 @@ const products: Product[] = [
     name: "Memory Foam Pillow",
     price: 59.99,
     originalPrice: 79.99,
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/2233703/pexels-photo-2233703.jpeg",
     rating: 4.6,
 
     badge: "Best Seller",
@@ -231,8 +191,7 @@ const products: Product[] = [
     name: "Silk Bedsheet Set",
     price: 199.99,
     originalPrice: 299.99,
-    image:
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
     rating: 4.8,
 
     badge: "Featured",
@@ -253,7 +212,7 @@ const TrendingMobile = () => {
       <div className="w-full max-w-7xl mx-auto ">
         <div className="flex items-center justify-between">
           <MobileTitle title="Trending items" />
-          <Link className="text-[#222f3e] text-[12px]" href={""}>
+          <Link className="text-[#222f3e] text-[12px]" href="/product-list">
             See All
           </Link>
         </div>
