@@ -595,26 +595,6 @@ export default function ProductList() {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-white border-t border-gray-200 px-4 py-2">
-        <div className="flex justify-around items-center">
-          <div className="flex flex-col items-center">
-            <Home className="w-6 h-6 text-blue-500" />
-            <span className="text-xs text-blue-500 mt-1">Home</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <Grid3X3 className="w-6 h-6 text-gray-400" />
-            <span className="text-xs text-gray-500 mt-1">Categories</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <User className="w-6 h-6 text-gray-400" />
-            <span className="text-xs text-gray-500 mt-1">Account</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <ShoppingBag className="w-6 h-6 text-gray-400" />
-            <span className="text-xs text-gray-500 mt-1">Cart</span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
